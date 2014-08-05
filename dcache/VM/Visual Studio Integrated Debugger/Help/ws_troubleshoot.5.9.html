@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xml:lang="en" lang="en" xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <meta http-equiv="Content-Style-Type" content="text/css" />
+    <!-- saved from url=(0014)about:internet -->
+    <title>Need to Clean Up After a Failure to Debug Locally</title>
+    <link rel="StyleSheet" href="css/ws_troubleshoot.css" type="text/css" media="all" />
+    <link rel="StyleSheet" href="css/webworks.css" type="text/css" media="all" />
+    <script type="text/javascript" language="JavaScript1.2" src="wwhdata/common/context.js"></script>
+    <script type="text/javascript" language="JavaScript1.2" src="wwhdata/common/towwhdir.js"></script>
+    <script type="text/javascript" language="JavaScript1.2" src="wwhdata/common/wwhpagef.js"></script>
+    <script type="text/javascript" language="JavaScript1.2">
+      <!--
+        var  WebWorksRootPath = "";
+      // -->
+    </script>
+    <script type="text/javascript" language="JavaScript1.2">
+      <!--
+        // Set reference to top level help frame
+        //
+        var  WWHFrame = WWHGetWWHFrame("", true);
+      // -->
+    </script>
+    <script type="text/javascript" language="JavaScript1.2" src="scripts/expand.js"></script>
+  </head>
+  <body style="" onLoad="WWHUpdate();" onUnload="WWHUnload();" onKeyDown="WWHHandleKeyDown((document.all||document.getElementById||document.layers)?event:null);" onKeyPress="WWHHandleKeyPress((document.all||document.getElementById||document.layers)?event:null);" onKeyUp="WWHHandleKeyUp((document.all||document.getElementById||document.layers)?event:null);">
+    <br />
+    <div class="WebWorks_Breadcrumbs" style="text-align: left;">
+      <a class="WebWorks_Breadcrumb_Link" href="ws_troubleshoot.5.1.html#994858">Troubleshooting Live and Replay Debugging</a> : <a class="WebWorks_Breadcrumb_Link" href="ws_troubleshoot.5.4.html#994858">Live Debugging Tips</a> : Need to Clean Up After a Failure to Debug Locally</div>
+    <hr align="left" />
+    <blockquote>
+      <div class="H2_Heading2"><a name="994858">Need to Clean Up After a Failure to Debug Locally</a></div>
+      <div class="B_Body"><span class="bold"><a name="995197">Problem</a></span></div>
+      <div class="B_Body"><a name="995198">If you try to run the debugger locally after a debugging session in a virtual machine fails or stalls, you might </a>get a Visual Studio error that indicates that the remote server cannot be found.</div>
+      <div class="B_Body" style="color: #000000; font-style: normal; font-variant: normal; font-weight: bold; text-transform: none; vertical-align: baseline;"><span class="bold"><a name="995199">Solution</a></span></div>
+      <div class="B_Body"><a name="994859">Before you begin debugging in a local environment you must clean up the failure.</a></div>
+      <div class="P_ProcedureHead"><a name="994860">To clean up after a failure and debug locally</a></div>
+      <div class="L1_List1_outer" style="margin-left: 1pt;">
+        <table border="0" cellspacing="0" cellpadding="0" id="SummaryNotRequired_np994861">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="L1_List1_inner" style="width: 17pt; white-space: nowrap;">1	</div>
+            </td>
+            <td width="100%">
+              <div class="L1_List1_inner"><a name="994861">To clean up the failure, do one of the following:</a></div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="BL1_BulletListIndent1_outer" style="margin-left: 19pt;">
+        <table border="0" cellspacing="0" cellpadding="0" id="SummaryNotRequired_np994862">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="BL1_BulletListIndent1_inner" style="width: 17pt; white-space: nowrap;">•</div>
+            </td>
+            <td width="100%">
+              <div class="BL1_BulletListIndent1_inner"><a name="994862">In C++, select </a><span class="Interface">Project Property Pages &gt; Debugging</span> and set the <span class="Interface">Debugger to Launch</span> property to <span class="C_Command">Local Windows Debugger</span>. </div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="BL1_BulletListIndent1_outer" style="margin-left: 19pt;">
+        <table border="0" cellspacing="0" cellpadding="0" id="SummaryNotRequired_np994863">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="BL1_BulletListIndent1_inner" style="width: 17pt; white-space: nowrap;">•</div>
+            </td>
+            <td width="100%">
+              <div class="BL1_BulletListIndent1_inner"><a name="994863">Set the </a><span class="Interface">Command</span> property to either an empty string or the correct local path. </div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="B2_BodyIndent2"><a name="994864">In C# and Visual Basic, select </a><span class="Interface">Project Property Pages &gt; Debug</span>. <br />Make sure <span class="Interface">Start project</span> is selected and <span class="Interface">Use remote machine</span> is deselected.</div>
+      <div class="L1_List1_outer" style="margin-left: 1pt;">
+        <table border="0" cellspacing="0" cellpadding="0" id="SummaryNotRequired_np994866">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="L1_List1_inner" style="width: 17pt; white-space: nowrap;">2	</div>
+            </td>
+            <td width="100%">
+              <div class="L1_List1_inner"><a name="994866">(Optional) You can remove any shared folders that were used to run the debug command and the Remote </a>Debug Monitor. Shared folders are usually removed at the end of a debugging session, but they might not be removed in the following circumstances: </div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="BL1_BulletListIndent1_outer" style="margin-left: 19pt;">
+        <table border="0" cellspacing="0" cellpadding="0" id="SummaryNotRequired_np994867">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="BL1_BulletListIndent1_inner" style="width: 17pt; white-space: nowrap;">•</div>
+            </td>
+            <td width="100%">
+              <div class="BL1_BulletListIndent1_inner"><a name="994867">If the debugging session causes a failure. </a></div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="BL1_BulletListIndent1_outer" style="margin-left: 19pt;">
+        <table border="0" cellspacing="0" cellpadding="0" id="SummaryNotRequired_np994868">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="BL1_BulletListIndent1_inner" style="width: 17pt; white-space: nowrap;">•</div>
+            </td>
+            <td width="100%">
+              <div class="BL1_BulletListIndent1_inner"><a name="994868">If the virtual machine is powered off while the debugging session is still running. </a></div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="B1_BodyIndent"><a name="994869">Shared folders are typically reused when another debugging session is started, so cleanup is not required.</a></div>
+      <script type="text/javascript" language="JavaScript1.2">
+        <!--
+          // Clear related topics
+          //
+          WWHClearRelatedTopics();
+
+          document.writeln(WWHRelatedTopicsInlineHTML());
+        // -->
+      </script>
+    </blockquote>
+    <hr align="left" />
+    <table align="right"></table>
+    <div class="copyright_info" style="font-family: sans-serif; font-size: 12px"></div>
+    <div class="copyright_info" style="font-family: sans-serif; font-size: 12px; color:gray">
+      <span class="copyright_info" style="font-family: sans-serif; font-size: 8pt; color:gray">
+        <a href="#" onclick="WWHFrame.WWHControls.fClickedEmail()">Send feedback</a> &nbsp;| &nbsp; <a href="http://vmware.com/support/" target="_blank">Technical Support</a> &nbsp;| &nbsp; Copyright © 1998-2009 VMware, Inc. All rights reserved. This product is protected by U.S. and international copyright and intellectual property laws. This product is covered by one or more patents listed in the patent.txt file found at <a href="http://www.vmware.com/go/patents" target="_blank">http://www.vmware.com/go/patents</a>.</span>
+    </div>
+    <script type="text/javascript" language="JavaScript1.2">
+      <!--
+        document.write(WWHRelatedTopicsDivTag() + WWHPopupDivTag() + WWHALinksDivTag());
+      // -->
+    </script>
+  </body>
+</html>

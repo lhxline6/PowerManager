@@ -1,0 +1,91 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/layout1"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="#FFFFFF"
+    android:orientation="vertical"
+    android:padding="10dip" >
+
+    <!--
+           <test.Droidlogin.library.MyScrollLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent" 
+        android:visibility="visible">          
+    -->
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="77dp"
+        android:background="#000000"
+        android:orientation="horizontal"
+        android:padding="10dp" >
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="20dp"
+            android:background="@android:color/white"
+            android:padding="1dp" >
+
+            <ImageView
+                android:layout_width="55dp"
+                android:layout_height="match_parent"
+                android:background="@drawable/img_person_icon"
+                android:contentDescription="@string/person_icon" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/title1"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginLeft="10dp"
+            android:gravity="left"
+            android:textSize="30sp"
+            android:color="#000000" />
+    </LinearLayout>
+
+    <!-- Email Label -->
+
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="25dip"
+        android:text="新组名："
+        android:textColor="#372c24"
+        android:textSize="25dip" />
+
+    <EditText
+        android:id="@+id/groupEdit"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20dip"
+        android:layout_marginTop="5dip"
+        android:layout_weight="0.08"
+        android:background="@drawable/edittext_rounded_corners"
+        android:singleLine="true" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <Button
+            android:id="@+id/Yes"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="确定"
+            android:layout_weight="1.0"
+            android:textSize="20dip" />
+
+        <Button
+            android:id="@+id/No"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="取消"
+            android:layout_weight="1.0"
+            android:textSize="20dip" />
+    </LinearLayout>
+
+</LinearLayout>

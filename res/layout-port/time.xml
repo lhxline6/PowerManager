@@ -1,0 +1,186 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" 
+    android:background="@drawable/img_bg" >
+
+   
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+       	android:background="@+drawable/aaaa"
+        android:padding="10dp" >
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="20dp"
+            android:background="@android:color/white"
+            android:padding="1dp" >
+
+            <ImageView
+                android:layout_width="55dp"
+                android:layout_height="55dp"
+                android:background="@drawable/hhh"
+                android:contentDescription="@string/person_icon" />
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/titlefortime"
+            android:layout_gravity="center"
+            android:layout_marginLeft="10dp"
+            android:gravity="left"
+            android:text="@string/str_name"
+            android:color="#000000"
+            android:textSize="30sp" />
+    </LinearLayout>
+    <ScrollView
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical"
+     >
+    
+       <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" >
+	 <TextView
+        android:id="@+id/textView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="#000000"
+        android:text="活动" />
+
+	 <EditText
+	     android:id="@+id/editText1"
+	     android:layout_width="match_parent"
+	     android:layout_height="wrap_content"
+	     android:ems="10" >
+
+	     <requestFocus />
+	 </EditText>
+<TextView
+           android:id="@+id/textView2"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:textColor="#000000"
+           android:text="选择" />
+
+ <Button
+     android:id="@+id/choose1"
+     android:layout_width="match_parent"
+     android:drawableRight="@drawable/xia"  
+      android:layout_gravity="center"
+      android:layout_height="40dp"
+      android:textSize="15dp"
+      android:background="#FFFFFF"
+     android:text="请选择" />
+
+       <TextView
+           android:id="@+id/textView3"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:textColor="#000000"
+           android:text="从" />
+   <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="10dp" >
+       <Button
+           android:id="@+id/BeginDate"
+           android:layout_width="wrap_content"
+           android:layout_marginRight="10dp"
+           android:layout_gravity="center"
+           android:layout_weight="0.5"
+           android:layout_height="40dp"
+     	 	android:textSize="15dp"
+             android:background="#FFFFFF"
+             android:drawableRight="@drawable/right_to_blue"  
+           android:text="Button" />
+
+       <Button
+           android:id="@+id/BeginTime"
+           android:layout_width="wrap_content"
+           android:layout_height="40dp"
+      		android:textSize="15dp"
+      		android:layout_marginLeft="10dp"
+            android:layout_gravity="center"
+              android:background="#FFFFFF"
+              android:drawableRight="@drawable/right_to_blue"  
+            android:layout_weight="0.5"
+           android:text="Button" />
+</LinearLayout>
+       <TextView
+           android:id="@+id/textView4"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:textColor="#000000"
+           
+           android:text="到" />
+
+ <LinearLayout
+     android:layout_width="fill_parent"
+     android:layout_height="wrap_content"
+     android:orientation="horizontal"
+     android:padding="10dp" >
+
+     <Button
+        android:id="@+id/EndDate"
+        android:layout_width="wrap_content"
+		android:layout_height="40dp"
+      	android:textSize="15dp"
+      	android:layout_marginRight="10dp"
+      	android:drawableRight="@drawable/right_to_blue"  
+        android:layout_gravity="center"
+        android:layout_weight="0.45"
+        android:background="#FFFFFF"
+        android:text="Button" />
+
+     <Button
+         android:id="@+id/EndTime"
+         android:layout_width="wrap_content"
+        android:layout_height="40dp"
+      android:textSize="15dp"
+      android:layout_marginLeft="10dp"
+         android:layout_gravity="center"
+           android:background="#FFFFFF"
+           android:drawableRight="@drawable/right_to_blue"  
+         android:layout_weight="0.5"
+         android:text="Button" />
+ </LinearLayout>
+
+ 
+  <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="10dp" >
+     
+       <Button
+           android:id="@+id/button6"
+           android:layout_width="130sp"
+           android:layout_height="40dp"
+           android:background="#FF0000"
+          android:layout_marginRight="10dp"
+           android:text="确定" />
+
+       <Button
+           android:id="@+id/button7"
+           android:layout_width="130sp"
+          android:layout_marginLeft="10dp"
+            android:layout_height="40dp"
+             android:background="#FF0000"
+         
+           android:text="取消" />
+       
+       </LinearLayout>
+    </LinearLayout>
+</ScrollView>
+
+</LinearLayout>

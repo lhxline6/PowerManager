@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xml:lang="en" lang="en" xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <meta http-equiv="Content-Style-Type" content="text/css" />
+    <!-- saved from url=(0014)about:internet -->
+    <title>Start Replay Debugging</title>
+    <link rel="StyleSheet" href="css/ws_replay.css" type="text/css" media="all" />
+    <link rel="StyleSheet" href="css/webworks.css" type="text/css" media="all" />
+    <script type="text/javascript" language="JavaScript1.2" src="wwhdata/common/context.js"></script>
+    <script type="text/javascript" language="JavaScript1.2" src="wwhdata/common/towwhdir.js"></script>
+    <script type="text/javascript" language="JavaScript1.2" src="wwhdata/common/wwhpagef.js"></script>
+    <script type="text/javascript" language="JavaScript1.2">
+      <!--
+        var  WebWorksRootPath = "";
+      // -->
+    </script>
+    <script type="text/javascript" language="JavaScript1.2">
+      <!--
+        // Set reference to top level help frame
+        //
+        var  WWHFrame = WWHGetWWHFrame("", true);
+      // -->
+    </script>
+    <script type="text/javascript" language="JavaScript1.2" src="scripts/expand.js"></script>
+  </head>
+  <body style="" onLoad="WWHUpdate();" onUnload="WWHUnload();" onKeyDown="WWHHandleKeyDown((document.all||document.getElementById||document.layers)?event:null);" onKeyPress="WWHHandleKeyPress((document.all||document.getElementById||document.layers)?event:null);" onKeyUp="WWHHandleKeyUp((document.all||document.getElementById||document.layers)?event:null);">
+    <br />
+    <div class="WebWorks_Breadcrumbs" style="text-align: left;">
+      <a class="WebWorks_Breadcrumb_Link" href="ws_replay.3.1.html#1030200">Using Replay Debugging Mode</a> : Start Replay Debugging</div>
+    <hr align="left" />
+    <blockquote>
+      <div class="H1_Heading1"><a name="1030200">Start Replay Debugging</a></div>
+      <div class="B_Body"><a name="1025551">After preparing and recording, you are ready to start debugging. You can start a replay debugging session </a>from the beginning of the recording, or you can attach to a process that is already running in the recording. </div>
+      <div class="B_Body"><a name="1017070">Starting a replay debugging session powers on a virtual machine and starts replaying a recording. As with </a>traditional debugging, if a breakpoint or exception is encountered, the application is suspended. You can then examine the application or continue execution.</div>
+      <div class="P_ProcedureHead"><a name="1017074">To start a replay debugging session</a></div>
+      <div class="L1F_List1First_outer" style="margin-left: 1pt;">
+        <table border="0" cellspacing="0" cellpadding="0" id="SummaryNotRequired_np1025160">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="L1F_List1First_inner" style="width: 17pt; white-space: nowrap;">1	</div>
+            </td>
+            <td width="100%">
+              <div class="L1F_List1First_inner"><a name="1025160">Set a breakpoint, for example in the first line of </a><span class="C_Command">main()</span>.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="L1_List1_outer" style="margin-left: 1pt;">
+        <table border="0" cellspacing="0" cellpadding="0" id="SummaryNotRequired_np1025181">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="L1_List1_inner" style="width: 17pt; white-space: nowrap;">2	</div>
+            </td>
+            <td width="100%">
+              <div class="L1_List1_inner"><a name="1025181">Select </a><span class="Interface">VMware &gt; Start Replay Debugging</span> <span class="Interface">in VM</span>. Replay begins.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="L1_List1_outer" style="margin-left: 1pt;">
+        <table border="0" cellspacing="0" cellpadding="0" id="SummaryNotRequired_np1025242">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="L1_List1_inner" style="width: 17pt; white-space: nowrap;">3	</div>
+            </td>
+            <td width="100%">
+              <div class="L1_List1_inner"><a name="1025242">When you are prompted to enter the folder containing various DLLs (</a><span class="C_Command">ntdll.dll</span> for example), type the name of the folder that you created in <span class="zlink"><a href="javascript:WWHClickedPopup('help_ws_vsid', 'ws_replay.3.4.html#1022403', '');">Ensure that Guest DLLs are Available on the Host</a></span> (<span class="C_Command">C:\guestdlls\system32</span> was suggested).</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="B1_BodyIndent"><a name="1025289">The configuration options are updated with this folder name, so you are not asked again for a folder </a>name, unless another DLL is missing.</div>
+      <div class="L1_List1_outer" style="margin-left: 1pt;">
+        <table border="0" cellspacing="0" cellpadding="0" id="SummaryNotRequired_np1025320">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="L1_List1_inner" style="width: 17pt; white-space: nowrap;">4	</div>
+            </td>
+            <td width="100%">
+              <div class="L1_List1_inner"><a name="1025320">When the debugger hits your breakpoint, you can do almost anything possible in traditional debugging.</a></div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="B_Body"><a name="1030246">If the end of the recording is reached while replay debugging, the debugging process is interrupted before </a>exiting so that you can initiate reverse execution.</div>
+      <div class="B_Body"><a name="1025475">If you have replay snapshots in your recording, you can select a replay snapshot to access a specific point in </a>the recording without having to replay the recording from the beginning. This is useful for long recordings.</div>
+      <div class="P_ProcedureHead"><a name="1017085">To start a replay debugging session from a designated point in a recording</a></div>
+      <div class="L1F_List1First_outer" style="margin-left: 1pt;">
+        <table border="0" cellspacing="0" cellpadding="0" id="SummaryNotRequired_np1017086">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="L1F_List1First_inner" style="width: 17pt; white-space: nowrap;">1	</div>
+            </td>
+            <td width="100%">
+              <div class="L1F_List1First_inner"><a name="1017086">Select </a><span class="Interface">VMware &gt; Attach to Process in Recording</span>. A Visual Studio project must be open.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="L1_List1_outer" style="margin-left: 1pt;">
+        <table border="0" cellspacing="0" cellpadding="0" id="SummaryNotRequired_np1017087">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="L1_List1_inner" style="width: 17pt; white-space: nowrap;">2	</div>
+            </td>
+            <td width="100%">
+              <div class="L1_List1_inner"><a name="1017087">Enter information in the Attach to Process dialog box. Most fields are populated from the configuration </a>properties of the current project. You must specify the replay snapshot you want to use.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="L1_List1_outer" style="margin-left: 1pt;">
+        <table border="0" cellspacing="0" cellpadding="0" id="SummaryNotRequired_np1017089">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="L1_List1_inner" style="width: 17pt; white-space: nowrap;">3	</div>
+            </td>
+            <td width="100%">
+              <div class="L1_List1_inner"><a name="1017089">Select </a><span class="Interface">Get Processes </span>to get a list of all processes.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="L1_List1_outer" style="margin-left: 1pt;">
+        <table border="0" cellspacing="0" cellpadding="0" id="SummaryNotRequired_np1017090">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="L1_List1_inner" style="width: 17pt; white-space: nowrap;">4	</div>
+            </td>
+            <td width="100%">
+              <div class="L1_List1_inner"><a name="1017090">Select the process to debug and click </a><span class="Interface">Attach</span>.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="B_Body"><a name="1030280">You are notified if you try to attach to a process that differs from the Visual Studio project’s startup command.</a></div>
+      <script type="text/javascript" language="JavaScript1.2">
+        <!--
+          // Clear related topics
+          //
+          WWHClearRelatedTopics();
+
+          document.writeln(WWHRelatedTopicsInlineHTML());
+        // -->
+      </script>
+    </blockquote>
+    <hr align="left" />
+    <table align="right"></table>
+    <div class="copyright_info" style="font-family: sans-serif; font-size: 12px"></div>
+    <div class="copyright_info" style="font-family: sans-serif; font-size: 12px; color:gray">
+      <span class="copyright_info" style="font-family: sans-serif; font-size: 8pt; color:gray">
+        <a href="#" onclick="WWHFrame.WWHControls.fClickedEmail()">Send feedback</a> &nbsp;| &nbsp; <a href="http://vmware.com/support/" target="_blank">Technical Support</a> &nbsp;| &nbsp; Copyright © 1998-2009 VMware, Inc. All rights reserved. This product is protected by U.S. and international copyright and intellectual property laws. This product is covered by one or more patents listed in the patent.txt file found at <a href="http://www.vmware.com/go/patents" target="_blank">http://www.vmware.com/go/patents</a>.</span>
+    </div>
+    <script type="text/javascript" language="JavaScript1.2">
+      <!--
+        document.write(WWHRelatedTopicsDivTag() + WWHPopupDivTag() + WWHALinksDivTag());
+      // -->
+    </script>
+  </body>
+</html>

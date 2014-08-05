@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xml:lang="en" lang="en" xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <meta http-equiv="Content-Style-Type" content="text/css" />
+    <!-- saved from url=(0014)about:internet -->
+    <title>Prepare the Guest System for Replay Debugging</title>
+    <link rel="StyleSheet" href="css/ws_replay.css" type="text/css" media="all" />
+    <link rel="StyleSheet" href="css/webworks.css" type="text/css" media="all" />
+    <script type="text/javascript" language="JavaScript1.2" src="wwhdata/common/context.js"></script>
+    <script type="text/javascript" language="JavaScript1.2" src="wwhdata/common/towwhdir.js"></script>
+    <script type="text/javascript" language="JavaScript1.2" src="wwhdata/common/wwhpagef.js"></script>
+    <script type="text/javascript" language="JavaScript1.2">
+      <!--
+        var  WebWorksRootPath = "";
+      // -->
+    </script>
+    <script type="text/javascript" language="JavaScript1.2">
+      <!--
+        // Set reference to top level help frame
+        //
+        var  WWHFrame = WWHGetWWHFrame("", true);
+      // -->
+    </script>
+    <script type="text/javascript" language="JavaScript1.2" src="scripts/expand.js"></script>
+  </head>
+  <body style="" onLoad="WWHUpdate();" onUnload="WWHUnload();" onKeyDown="WWHHandleKeyDown((document.all||document.getElementById||document.layers)?event:null);" onKeyPress="WWHHandleKeyPress((document.all||document.getElementById||document.layers)?event:null);" onKeyUp="WWHHandleKeyUp((document.all||document.getElementById||document.layers)?event:null);">
+    <br />
+    <div class="WebWorks_Breadcrumbs" style="text-align: left;">
+      <a class="WebWorks_Breadcrumb_Link" href="ws_replay.3.1.html#1016868">Using Replay Debugging Mode</a> : <a class="WebWorks_Breadcrumb_Link" href="ws_replay.3.3.html#1016868">Prepare the Host and Guest</a> : Prepare the Guest System for Replay Debugging</div>
+    <hr align="left" />
+    <blockquote>
+      <div class="H2_Heading2"><a name="1016868">Prepare the Guest System for Replay Debugging</a></div>
+      <div class="B_Body"><a name="1016870">To prepare the guest for replay debugging you must have VMware Tools installed, configure the guest to make </a>all the DLLs and files accessible for debugging on the guest system, and disable paging kernel-mode stacks. After doing all this, take a snapshot of the guest.</div>
+      <div class="H3_Heading3"><a name="1023227">Check VMware Tools and Virtual Hardware</a></div>
+      <div class="B_Body"><a name="1016871">Make sure that you have the latest version of VMware Tools that matches the guest operating system. Replay </a>debugging should be enabled by default in the Workstation Virtual Machine Settings editor.</div>
+      <div class="B_Body"><a name="1023235">The virtual machine must have exactly one virtual CPU, a requirement of record and replay technology.</a></div>
+      <div class="H3_Heading3"><a name="1016872">Copy Necessary DLLs from Host to Guest</a></div>
+      <div class="B_Body"><a name="1023342">All DLLs called by the program that you intend to debug must be available in the guest, because that is where </a>the program will run. System DLLs are already in the guest, and DLLs built by your Visual Studio project will become available in the guest. You must manually copy any other DLLs into the guest. Yo u can drag and drop DLLs from the host to the guest. Very simple programs might have no DLL dependencies. However a normal application does not run, and cannot be debugged, if the required DLLs are unavailable in the guest.</div>
+      <div class="H3_Heading3"><a name="1016874">Disable Paging of Kernel-Mode Stacks</a></div>
+      <div class="B_Body"><a name="1016876">You can disable paging of kernel-mode stacks either by using the Global Flags utility (the easy way) or by </a>editing the Windows registry. Visual Studio frequently reports incorrect registers and call-stacks if the paging of kernel-mode stacks is not disabled in the guest system. </div>
+      <div class="P_ProcedureHead"><a name="1016877">To disable paging kernel-mode stacks</a></div>
+      <div class="L1_List1_outer" style="margin-left: 1pt;">
+        <table border="0" cellspacing="0" cellpadding="0" id="SummaryNotRequired_np1016878">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="L1_List1_inner" style="width: 17pt; white-space: nowrap;">1	</div>
+            </td>
+            <td width="100%">
+              <div class="L1_List1_inner"><a name="1016878">Start the Global Flags utility distributed with the Microsoft Debugging Tools for Windows.</a></div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="B1_BodyIndent" style="color: #000000; font-style: normal; font-variant: normal; font-weight: normal; text-transform: none; vertical-align: baseline;"><span class="C_Command"><a name="1016879">C:\Program Files\Debugging Tools for Windows\gflags.exe</a></span></div>
+      <div class="B1_BodyIndent"><a name="1016880">If the Debugging Tools for Windows are not installed in the guest, copy the </a><span class="C_Command">gflags.exe</span> file from the host to the guest and start it.</div>
+      <div class="L1_List1_outer" style="margin-left: 1pt;">
+        <table border="0" cellspacing="0" cellpadding="0" id="SummaryNotRequired_np1016882">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="L1_List1_inner" style="width: 17pt; white-space: nowrap;">2	</div>
+            </td>
+            <td width="100%">
+              <div class="L1_List1_inner"><a name="1016882">On the </a><span class="Interface">System Registry</span> tab, select the option <span class="Interface">Disable paging of kernel stacks</span> and click <span class="Interface">OK</span>.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="L1_List1_outer" style="margin-left: 1pt;">
+        <table border="0" cellspacing="0" cellpadding="0" id="SummaryNotRequired_np1023339">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="L1_List1_inner" style="width: 17pt; white-space: nowrap;">3	</div>
+            </td>
+            <td width="100%">
+              <div class="L1_List1_inner"><a name="1023339">Reboot the guest system for this change to take effect.</a></div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="P_ProcedureHead"><a name="1023081">To edit the Registry and disable paging kernel-mode stacks</a></div>
+      <div class="L1F_List1First_outer" style="margin-left: 1pt;">
+        <table border="0" cellspacing="0" cellpadding="0" id="SummaryNotRequired_np1023082">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="L1F_List1First_inner" style="width: 17pt; white-space: nowrap;">1	</div>
+            </td>
+            <td width="100%">
+              <div class="L1F_List1First_inner"><a name="1023082">Click </a><span class="Interface">Start &gt; Run</span> and type <span class="Interface">regedit</span>.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="L1_List1_outer" style="margin-left: 1pt;">
+        <table border="0" cellspacing="0" cellpadding="0" id="SummaryNotRequired_np1016889">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="L1_List1_inner" style="width: 17pt; white-space: nowrap;">2	</div>
+            </td>
+            <td width="100%">
+              <div class="L1_List1_inner"><a name="1016889">In the left pane of the Registry Editor, navigate to </a><span class="C_Command">HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Session Manager</span>.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="L1_List1_outer" style="margin-left: 1pt;">
+        <table border="0" cellspacing="0" cellpadding="0" id="SummaryNotRequired_np1029752">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="L1_List1_inner" style="width: 17pt; white-space: nowrap;">3	</div>
+            </td>
+            <td width="100%">
+              <div class="L1_List1_inner"><a name="1029752">In the right pane, right-click </a><span class="Interface">GlobalFlag </span>and select <span class="Interface">Modify</span>.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="L1_List1_outer" style="margin-left: 1pt;">
+        <table border="0" cellspacing="0" cellpadding="0" id="SummaryNotRequired_np1029753">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="L1_List1_inner" style="width: 17pt; white-space: nowrap;">4	</div>
+            </td>
+            <td width="100%">
+              <div class="L1_List1_inner"><a name="1029753">With Base </a><span class="Interface">Hexadecimal</span>, type value <span class="Interface">80000</span>, which corresponds to <span class="C_Command">FLG_DISABLE_PAGE_KERNEL_STACKS</span>.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="L1_List1_outer" style="margin-left: 1pt;">
+        <table border="0" cellspacing="0" cellpadding="0" id="SummaryNotRequired_np1029757">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="L1_List1_inner" style="width: 17pt; white-space: nowrap;">5	</div>
+            </td>
+            <td width="100%">
+              <div class="L1_List1_inner"><a name="1029757">Click </a><span class="Interface">OK</span> and exit the Registry Editor.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="L1_List1_outer" style="margin-left: 1pt;">
+        <table border="0" cellspacing="0" cellpadding="0" id="SummaryNotRequired_np1029754">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="L1_List1_inner" style="width: 17pt; white-space: nowrap;">6	</div>
+            </td>
+            <td width="100%">
+              <div class="L1_List1_inner"><a name="1029754">Reboot the guest system for this change to take effect.</a></div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="H3_Heading3"><a name="1023390">Take a Snapshot</a></div>
+      <div class="B_Body"><a name="1023426">Before debugging, take a snapshot to serve as the starting point for recordings that you create. A snapshot </a>eliminates the need to power on the virtual machine every time you create a recording. Call it <span class="C_Command">BaseSnapShot</span>.</div>
+      <script type="text/javascript" language="JavaScript1.2">
+        <!--
+          // Clear related topics
+          //
+          WWHClearRelatedTopics();
+
+          document.writeln(WWHRelatedTopicsInlineHTML());
+        // -->
+      </script>
+    </blockquote>
+    <hr align="left" />
+    <table align="right"></table>
+    <div class="copyright_info" style="font-family: sans-serif; font-size: 12px"></div>
+    <div class="copyright_info" style="font-family: sans-serif; font-size: 12px; color:gray">
+      <span class="copyright_info" style="font-family: sans-serif; font-size: 8pt; color:gray">
+        <a href="#" onclick="WWHFrame.WWHControls.fClickedEmail()">Send feedback</a> &nbsp;| &nbsp; <a href="http://vmware.com/support/" target="_blank">Technical Support</a> &nbsp;| &nbsp; Copyright © 1998-2009 VMware, Inc. All rights reserved. This product is protected by U.S. and international copyright and intellectual property laws. This product is covered by one or more patents listed in the patent.txt file found at <a href="http://www.vmware.com/go/patents" target="_blank">http://www.vmware.com/go/patents</a>.</span>
+    </div>
+    <script type="text/javascript" language="JavaScript1.2">
+      <!--
+        document.write(WWHRelatedTopicsDivTag() + WWHPopupDivTag() + WWHALinksDivTag());
+      // -->
+    </script>
+  </body>
+</html>

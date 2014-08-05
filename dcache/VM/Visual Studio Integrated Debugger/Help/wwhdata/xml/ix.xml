@@ -1,0 +1,212 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WebWorksHelpIX version="5.0" xmlns="urn:WebWorks-Help-Index-Schema">
+  <g t="A" o="002">
+    <i t="add replay snapshot">
+      <j l="20#1017054" />
+    </i>
+  </g>
+  <g t="C" o="002">
+    <i t="configurations in live debugging">
+      <i t="removing">
+        <j l="57#991740" />
+      </i>
+      <i t="renaming">
+        <j l="56#991726" />
+      </i>
+    </i>
+    <i t="create a recording using Visual Studio">
+      <j l="19#1017036" />
+    </i>
+  </g>
+  <g t="D" o="002">
+    <i t="debugging">
+      <i t="attaching to a process in a virtual machine">
+        <j l="61#991779" />
+      </i>
+      <i t="modes in the Integrated Virtual Debugger">
+        <j l="2#995557" />
+      </i>
+    </i>
+    <i t="debugging modes">
+      <j l="2#995557" />
+    </i>
+    <i t="debugging recording application">
+      <j l="21#1025551" />
+    </i>
+    <i t="disable kernel-mode stacks paging">
+      <j l="14#1016876" />
+    </i>
+    <i t="documentation">
+      <i t="getting the latest versions of">
+        <j l="0#991491" />
+      </i>
+    </i>
+  </g>
+  <g t="E" o="002">
+    <i t="enable automatic snapshots">
+      <j l="20#1017054" />
+    </i>
+  </g>
+  <g t="G" o="002">
+    <i t="guest operating system">
+      <i t="where to find installation information">
+        <j l="0#991491" />
+      </i>
+    </i>
+  </g>
+  <g t="I" o="002">
+    <i t="install Remote Debug Monitor">
+      <j l="46#991618" />
+    </i>
+    <i t="installing">
+      <i t="guest operating systems">
+        <j l="0#991491" />
+      </i>
+    </i>
+    <i t="Integrated Virtual Debugger">
+      <i t="configuring for live debugging">
+        <j l="50#991654" />
+      </i>
+      <i t="environment">
+        <j l="68#996642" />
+      </i>
+      <i t="Visual Studio">
+        <j l="1#991457" />
+      </i>
+    </i>
+  </g>
+  <g t="L" o="002">
+    <i t="live debugging">
+      <i t="configuring">
+        <j l="38#991561" />
+      </i>
+      <i t="configuring Windows XP firewall">
+        <j l="40#991577" />
+      </i>
+      <i t="starting in a virtual machine">
+        <j l="59#991754" />
+      </i>
+      <i t="using">
+        <j l="37#999401" />
+      </i>
+    </i>
+  </g>
+  <g t="M" o="002">
+    <i t="msvsmon.exe program">
+      <j l="5#996334" />
+    </i>
+  </g>
+  <g t="N" o="002">
+    <i t=".NET framework, Microsoft" s="NET framework, Microsoft">
+      <j l="44#991608" />
+    </i>
+  </g>
+  <g t="R" o="002">
+    <i t="Remote Debug Monitor">
+      <j l="5#996334" />
+    </i>
+    <i t="replay debugging">
+      <i t="configuration properties">
+        <j l="30#1026328" />
+        <j l="62#1001320" />
+      </i>
+      <i t="configure Visual Studio">
+        <j l="16#1023540" />
+      </i>
+      <i t="configuring">
+        <j l="12#1016860" />
+      </i>
+      <i t="limitations">
+        <j l="35#1028561" />
+      </i>
+      <i t="prepare guest">
+        <j l="14#1016870" />
+      </i>
+      <i t="prepare host">
+        <j l="13#1029584" />
+      </i>
+      <i t="set general properties">
+        <j l="31#1026376" />
+        <j l="63#1001261" />
+      </i>
+      <i t="set pre-record properties">
+        <j l="32#1027350" />
+        <j l="64#1001446" />
+      </i>
+      <i t="using reverse execution">
+        <j l="24#1017122" />
+      </i>
+    </i>
+    <i t="replay debugging mode">
+      <j l="10#1016797" />
+    </i>
+  </g>
+  <g t="S" o="002">
+    <i t="starting">
+      <i t="live debugging session in a virtual machine">
+        <j l="59#991754" />
+      </i>
+      <i t="reverse execution">
+        <j l="25#1017129" />
+      </i>
+      <i t="session in a virtual machine without debugging">
+        <j l="60#991764" />
+      </i>
+    </i>
+    <i t="stop reverse execution">
+      <j l="25#1017132" />
+    </i>
+    <i t="supported guest operating system">
+      <i t="for live debugging">
+        <j l="5#996346" />
+      </i>
+      <i t="for replay debugging">
+        <j l="6#996277" />
+      </i>
+    </i>
+    <i t="supported programming languages">
+      <i t="for live debugging">
+        <j l="5#996338" />
+      </i>
+      <i t="for replay debugging">
+        <j l="6#996269" />
+      </i>
+    </i>
+    <i t="supported versions">
+      <i t="for live debugging">
+        <j l="5#996334" />
+      </i>
+      <i t="for replay debugging">
+        <j l="6#996265" />
+      </i>
+    </i>
+    <i t="system requirements">
+      <i t="for live debugging">
+        <j l="5#997681" />
+      </i>
+      <i t="for replay debugging">
+        <j l="6#996273" />
+      </i>
+    </i>
+  </g>
+  <g t="T" o="002">
+    <i t="troubleshooting">
+      <i t="live debugging">
+        <j l="69#994845" />
+      </i>
+      <i t="replay debugging">
+        <j l="76#994872" />
+      </i>
+    </i>
+  </g>
+  <g t="U" o="002">
+    <i t="using reverse execution">
+      <j l="24#1017122" />
+    </i>
+  </g>
+  <g t="W" o="002">
+    <i t="Windows group policy settings">
+      <j l="39#991568" />
+    </i>
+  </g>
+</WebWorksHelpIX>

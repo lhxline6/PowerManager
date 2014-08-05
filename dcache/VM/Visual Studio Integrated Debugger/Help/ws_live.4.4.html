@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xml:lang="en" lang="en" xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <meta http-equiv="Content-Style-Type" content="text/css" />
+    <!-- saved from url=(0014)about:internet -->
+    <title>Configure the Group Policy Settings for Windows</title>
+    <link rel="StyleSheet" href="css/ws_live.css" type="text/css" media="all" />
+    <link rel="StyleSheet" href="css/webworks.css" type="text/css" media="all" />
+    <script type="text/javascript" language="JavaScript1.2" src="wwhdata/common/context.js"></script>
+    <script type="text/javascript" language="JavaScript1.2" src="wwhdata/common/towwhdir.js"></script>
+    <script type="text/javascript" language="JavaScript1.2" src="wwhdata/common/wwhpagef.js"></script>
+    <script type="text/javascript" language="JavaScript1.2">
+      <!--
+        var  WebWorksRootPath = "";
+      // -->
+    </script>
+    <script type="text/javascript" language="JavaScript1.2">
+      <!--
+        // Set reference to top level help frame
+        //
+        var  WWHFrame = WWHGetWWHFrame("", true);
+      // -->
+    </script>
+    <script type="text/javascript" language="JavaScript1.2" src="scripts/expand.js"></script>
+  </head>
+  <body style="" onLoad="WWHUpdate();" onUnload="WWHUnload();" onKeyDown="WWHHandleKeyDown((document.all||document.getElementById||document.layers)?event:null);" onKeyPress="WWHHandleKeyPress((document.all||document.getElementById||document.layers)?event:null);" onKeyUp="WWHHandleKeyUp((document.all||document.getElementById||document.layers)?event:null);">
+    <br />
+    <div class="WebWorks_Breadcrumbs" style="text-align: left;">
+      <a class="WebWorks_Breadcrumb_Link" href="ws_live.4.1.html#991566">Using Live Debugging Mode</a> : <a class="WebWorks_Breadcrumb_Link" href="ws_live.4.3.html#991566">Prepare the Guest for Live Debugging</a> : Configure the Group Policy Settings for Windows </div>
+    <hr align="left" />
+    <blockquote>
+      <div class="H2_Heading2"><a name="991566">Configure the Group Policy Settings for Windows </a></div>
+      <div class="B_Body"><a name="991568">Verify that the group policy is configured correctly for local authentication.</a></div>
+      <div class="P_ProcedureHead"><a name="991569">To configure the group policy settings for Windows</a></div>
+      <div class="B_Body"><a name="991570">Do one of the following:</a></div>
+      <div class="BL_BulletList_outer" style="margin-left: 1pt;">
+        <table border="0" cellspacing="0" cellpadding="0" id="SummaryNotRequired_np991571">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="BL_BulletList_inner" style="width: 17pt; white-space: nowrap;">•</div>
+            </td>
+            <td width="100%">
+              <div class="BL_BulletList_inner"><a name="991571">To configure the guest system’s group policy settings for Windows XP Professional:</a></div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="L2_List2_outer" style="margin-left: 19pt;">
+        <table border="0" cellspacing="0" cellpadding="0" id="SummaryNotRequired_np991572">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="L2_List2_inner" style="width: 17pt; white-space: nowrap;">a	</div>
+            </td>
+            <td width="100%">
+              <div class="L2_List2_inner"><a name="991572">Select </a><span class="Interface">Control Panel &gt; Administrative Tools &gt; Local Security Policy &gt; Local Policies </span>and select the <span class="Interface">Security Options</span> page.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="L2_List2_outer" style="margin-left: 19pt;">
+        <table border="0" cellspacing="0" cellpadding="0" id="SummaryNotRequired_np991573">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="L2_List2_inner" style="width: 17pt; white-space: nowrap;">b	</div>
+            </td>
+            <td width="100%">
+              <div class="L2_List2_inner"><a name="991573">Set the </a><span class="Interface">Network access: Sharing and security model for local accounts</span> policy to <span class="Interface">Classic </span><span class="Interface">–</span><span class="Interface"> local users </span><span class="Interface">authenticate as themselves</span>.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="BL_BulletList_outer" style="margin-left: 1pt;">
+        <table border="0" cellspacing="0" cellpadding="0" id="SummaryNotRequired_np995460">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="BL_BulletList_inner" style="width: 17pt; white-space: nowrap;">•</div>
+            </td>
+            <td width="100%">
+              <div class="BL_BulletList_inner"><a name="995460">To configure the guest system’s group policy settings for Windows Vista and Windows 7:</a></div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="L2F_List2First_outer" style="margin-left: 19pt;">
+        <table border="0" cellspacing="0" cellpadding="0" id="SummaryNotRequired_np995766">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="L2F_List2First_inner" style="width: 17pt; white-space: nowrap;">a	</div>
+            </td>
+            <td width="100%">
+              <div class="L2F_List2First_inner"><a name="995766">Set Network security: LAN Manger authentication level to </a><span class="Interface">Send LM &amp; NTLM responses</span>.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="L2_List2_outer" style="margin-left: 19pt;">
+        <table border="0" cellspacing="0" cellpadding="0" id="SummaryNotRequired_np991574">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="L2_List2_inner" style="width: 17pt; white-space: nowrap;">b	</div>
+            </td>
+            <td width="100%">
+              <div class="L2_List2_inner"><a name="991574">Set the </a><span class="Interface">Network access: Sharing and security model for local accounts</span> policy to <span class="Interface">Classic </span><span class="Interface">–</span><span class="Interface"> local users </span><span class="Interface">authenticate as themselves</span>.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="B1_BodyIndent"><a name="1000768">You cannot view the group policy on Vista Home Premium or Vista Home Basic.</a></div>
+      <script type="text/javascript" language="JavaScript1.2">
+        <!--
+          // Clear related topics
+          //
+          WWHClearRelatedTopics();
+
+          document.writeln(WWHRelatedTopicsInlineHTML());
+        // -->
+      </script>
+    </blockquote>
+    <hr align="left" />
+    <table align="right"></table>
+    <div class="copyright_info" style="font-family: sans-serif; font-size: 12px"></div>
+    <div class="copyright_info" style="font-family: sans-serif; font-size: 12px; color:gray">
+      <span class="copyright_info" style="font-family: sans-serif; font-size: 8pt; color:gray">
+        <a href="#" onclick="WWHFrame.WWHControls.fClickedEmail()">Send feedback</a> &nbsp;| &nbsp; <a href="http://vmware.com/support/" target="_blank">Technical Support</a> &nbsp;| &nbsp; Copyright © 1998-2009 VMware, Inc. All rights reserved. This product is protected by U.S. and international copyright and intellectual property laws. This product is covered by one or more patents listed in the patent.txt file found at <a href="http://www.vmware.com/go/patents" target="_blank">http://www.vmware.com/go/patents</a>.</span>
+    </div>
+    <script type="text/javascript" language="JavaScript1.2">
+      <!--
+        document.write(WWHRelatedTopicsDivTag() + WWHPopupDivTag() + WWHALinksDivTag());
+      // -->
+    </script>
+  </body>
+</html>

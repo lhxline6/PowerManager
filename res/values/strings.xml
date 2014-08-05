@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">智能插座管理系统</string>
+    <string name="state">当前状态</string>
+    <string name="settings">设置</string>
+    <string name="open">开关</string>
+	<string name="manage">退出</string>
+	 <string name="hello">Hello World, ListOnLongClickActivity!</string>
+
+    <string name="action_settings">Settings</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="person_icon">个人头像</string>
+    <string name="str_name">当前状态</string>
+
+    <string name="str_vertical">竖线</string>
+    <string name="str_content_icon">内容标志</string>
+    <string name="xlistview_header_hint_normal">下拉刷新</string>
+    <string name="xlistview_header_hint_ready">松开刷新数据</string>
+    <string name="xlistview_header_hint_loading">正在加载。。。</string>
+    <string name="xlistview_header_last_time">上次更新时间：</string>
+    <string name="xlistview_footer_hint_normal"> </string>
+    <string name="xlistview_footer_hint_ready">松开载入更多</string>
+    <string name="spinner_1_color_prompt">Choose a color</string>
+	
+</resources>

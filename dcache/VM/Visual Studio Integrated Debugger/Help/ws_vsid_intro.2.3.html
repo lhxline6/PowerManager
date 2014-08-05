@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xml:lang="en" lang="en" xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <meta http-equiv="Content-Style-Type" content="text/css" />
+    <!-- saved from url=(0014)about:internet -->
+    <title>Replay Debugging as a Break-Through Technology</title>
+    <link rel="StyleSheet" href="css/ws_vsid_intro.css" type="text/css" media="all" />
+    <link rel="StyleSheet" href="css/webworks.css" type="text/css" media="all" />
+    <script type="text/javascript" language="JavaScript1.2" src="wwhdata/common/context.js"></script>
+    <script type="text/javascript" language="JavaScript1.2" src="wwhdata/common/towwhdir.js"></script>
+    <script type="text/javascript" language="JavaScript1.2" src="wwhdata/common/wwhpagef.js"></script>
+    <script type="text/javascript" language="JavaScript1.2">
+      <!--
+        var  WebWorksRootPath = "";
+      // -->
+    </script>
+    <script type="text/javascript" language="JavaScript1.2">
+      <!--
+        // Set reference to top level help frame
+        //
+        var  WWHFrame = WWHGetWWHFrame("", true);
+      // -->
+    </script>
+    <script type="text/javascript" language="JavaScript1.2" src="scripts/expand.js"></script>
+  </head>
+  <body style="" onLoad="WWHUpdate();" onUnload="WWHUnload();" onKeyDown="WWHHandleKeyDown((document.all||document.getElementById||document.layers)?event:null);" onKeyPress="WWHHandleKeyPress((document.all||document.getElementById||document.layers)?event:null);" onKeyUp="WWHHandleKeyUp((document.all||document.getElementById||document.layers)?event:null);">
+    <br />
+    <div class="WebWorks_Breadcrumbs" style="text-align: left;">
+      <a class="WebWorks_Breadcrumb_Link" href="ws_vsid_intro.2.1.html#995455">Introduction to Live and Replay Debugging</a> : Replay Debugging as a Break-Through Technology</div>
+    <hr align="left" />
+    <blockquote>
+      <div class="H1_Heading1"><a name="995455">Replay Debugging as a Break-Through Technology</a></div>
+      <div class="B_Body"><a name="996415">Replay debugging allows developers to debug recordings of programs running in virtual machines. Replay </a>debugging is valuable for finding, diagnosing, and fixing bugs that are not easily reproduced, a particularly challenging class of bugs. Once the manifestation of a bug has been recorded, it can be replayed (and debugged) over and over again, and it is guaranteed to have instruction-by-instruction identical behavior each time. In addition, VMware Workstation includes a feature that simulates reverse execution of the program, making it easier to pin point the origin of a bug.</div>
+      <div class="B_Body"><a name="996417">Here are specific circumstances that benefit from replay debugging:</a></div>
+      <div class="H4R_Heading4Run-In"><a name="996419">Nondeterministic bugs.</a></div>
+      <div class="B_Body"><a name="996462">Some bugs only rear their ugly heads when a particular interleaving of concurrent </a>entities (e.g., threads, the operating system, network activity, and user input) is present. Given that the programmer cannot normally control (or even reason about) this interleaving, these bugs can be very difficult to reproduce. But if such a bug is recorded, we can examine it in the debugger as often as we like. Once a bug is recorded, it is no longer nondeterministic.</div>
+      <div class="H4R_Heading4Run-In"><a name="996421">Pseudo nondeterministic bugs.</a></div>
+      <div class="B_Body"><a name="996484">Some bugs are deterministic, but it's not always clear exactly what is </a>necessary to reproduce the bug. Bug reports indicating that a program crashed “...after clicking on a bunch of different UI elements,” are common but usually useless. If the bug is recorded, it is unnecessary to describe the steps for reproduction, because they are an implicit part of the recording itself.</div>
+      <div class="H4R_Heading4Run-In"><a name="996423">Bugs that can only be reproduced with a complex environment.</a></div>
+      <div class="B_Body"><a name="996507">If a bug appears in an application that </a>communicates with dozens of other local and remote processes that need to be setup and configured, reproducing the bug may be possible but prohibitively expensive. If the bug is recorded, the developer need not setup the other components of the system (e.g., other processes or remote clients). The effect of the other components is recorded, allowing the program of interest to be debugged in isolation.</div>
+      <div class="H4R_Heading4Run-In"><a name="996425">Heisenbugs.</a></div>
+      <div class="B_Body"><a name="996604">A Heisenbug (a play on the Heisenberg uncertainly principle) is a bug that does not manifest </a>itself when it is examined in the debugger. Such bugs are common because debugging is an invasive process that dramatically changes the timing characteristics of the program. If a bug is recorded, it can be debugged without impacting the behavior of the program at all.</div>
+      <div class="H4R_Heading4Run-In"><a name="996605">Memory corruption bugs.</a></div>
+      <div class="B_Body"><a name="996606">Memory corruption bugs are difficult to diagnose because almost any pointer </a>dereference in the program can be responsible for the corruption. The replay debugging facility in VMware Workstation 6.5 includes a reverse execution feature that (among other things) greatly helps track down memory corruption bugs. When a corrupted data structure is identified, the developer simply sets a data breakpoint (i.e., a watchpoint) on the corrupted data and executes backward. This will take the developer to the last point in time that the corrupted data structure was modified.</div>
+      <div class="B_Body"><a name="996409">To summarize, replay debugging has several benefits over traditional debugging:</a></div>
+      <div class="BL_BulletList_outer" style="margin-left: 1pt;">
+        <table border="0" cellspacing="0" cellpadding="0" id="SummaryNotRequired_np996793">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="BL_BulletList_inner" style="width: 17pt; white-space: nowrap;">•</div>
+            </td>
+            <td width="100%">
+              <div class="BL_BulletList_inner"><a name="996793">No debugging is performed during recording, so debugging activities do not affect the normal execution </a>of an application. This is useful for applications that interact with other processes or remote servers. For example, TCP connections do not time-out during a recording as they would during a debugging session.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="BL_BulletList_outer" style="margin-left: 1pt;">
+        <table border="0" cellspacing="0" cellpadding="0" id="SummaryNotRequired_np996733">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="BL_BulletList_inner" style="width: 17pt; white-space: nowrap;">•</div>
+            </td>
+            <td width="100%">
+              <div class="BL_BulletList_inner"><a name="996733">Bugs captured in a recording are reproduced exactly during playback debugging. You can examine </a>recorded bugs repeatedly in Visual Studio, and always see the same behavior. This characteristic makes replay debugging a powerful tool for identifying bugs that are hard to reproduce due to subtle variations in timing or system conditions.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="BL_BulletList_outer" style="margin-left: 1pt;">
+        <table border="0" cellspacing="0" cellpadding="0" id="SummaryNotRequired_np995652">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="BL_BulletList_inner" style="width: 17pt; white-space: nowrap;">•</div>
+            </td>
+            <td width="100%">
+              <div class="BL_BulletList_inner"><a name="995652">A feature simulating reverse execution is available in the replay debugging mode. In a traditional </a>debugging context, you must restart an application, then try to stop it soon enough to find the bug. Reverse execution makes it easier to find the bug. For example, if your data structure is corrupted, you set a data breakpoint (that is, a watchpoint) on the corrupted data and execute backward until you encounter the code that caused the corruption.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="B_Body"><a name="997517">Replay debugging has also been implemented for </a><span class="C_Command">gdb</span> in Linux. For current details, see the VMTN blogs and Communities forums on the <span class="URL">vmware.com</span> Web site.</div>
+      <script type="text/javascript" language="JavaScript1.2">
+        <!--
+          // Clear related topics
+          //
+          WWHClearRelatedTopics();
+
+          document.writeln(WWHRelatedTopicsInlineHTML());
+        // -->
+      </script>
+    </blockquote>
+    <hr align="left" />
+    <table align="right"></table>
+    <div class="copyright_info" style="font-family: sans-serif; font-size: 12px"></div>
+    <div class="copyright_info" style="font-family: sans-serif; font-size: 12px; color:gray">
+      <span class="copyright_info" style="font-family: sans-serif; font-size: 8pt; color:gray">
+        <a href="#" onclick="WWHFrame.WWHControls.fClickedEmail()">Send feedback</a> &nbsp;| &nbsp; <a href="http://vmware.com/support/" target="_blank">Technical Support</a> &nbsp;| &nbsp; Copyright © 1998-2009 VMware, Inc. All rights reserved. This product is protected by U.S. and international copyright and intellectual property laws. This product is covered by one or more patents listed in the patent.txt file found at <a href="http://www.vmware.com/go/patents" target="_blank">http://www.vmware.com/go/patents</a>.</span>
+    </div>
+    <script type="text/javascript" language="JavaScript1.2">
+      <!--
+        document.write(WWHRelatedTopicsDivTag() + WWHPopupDivTag() + WWHALinksDivTag());
+      // -->
+    </script>
+  </body>
+</html>

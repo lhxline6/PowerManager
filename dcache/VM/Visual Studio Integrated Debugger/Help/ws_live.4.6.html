@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xml:lang="en" lang="en" xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <meta http-equiv="Content-Style-Type" content="text/css" />
+    <!-- saved from url=(0014)about:internet -->
+    <title>Configure User Accounts</title>
+    <link rel="StyleSheet" href="css/ws_live.css" type="text/css" media="all" />
+    <link rel="StyleSheet" href="css/webworks.css" type="text/css" media="all" />
+    <script type="text/javascript" language="JavaScript1.2" src="wwhdata/common/context.js"></script>
+    <script type="text/javascript" language="JavaScript1.2" src="wwhdata/common/towwhdir.js"></script>
+    <script type="text/javascript" language="JavaScript1.2" src="wwhdata/common/wwhpagef.js"></script>
+    <script type="text/javascript" language="JavaScript1.2">
+      <!--
+        var  WebWorksRootPath = "";
+      // -->
+    </script>
+    <script type="text/javascript" language="JavaScript1.2">
+      <!--
+        // Set reference to top level help frame
+        //
+        var  WWHFrame = WWHGetWWHFrame("", true);
+      // -->
+    </script>
+    <script type="text/javascript" language="JavaScript1.2" src="scripts/expand.js"></script>
+  </head>
+  <body style="" onLoad="WWHUpdate();" onUnload="WWHUnload();" onKeyDown="WWHHandleKeyDown((document.all||document.getElementById||document.layers)?event:null);" onKeyPress="WWHHandleKeyPress((document.all||document.getElementById||document.layers)?event:null);" onKeyUp="WWHHandleKeyUp((document.all||document.getElementById||document.layers)?event:null);">
+    <br />
+    <div class="WebWorks_Breadcrumbs" style="text-align: left;">
+      <a class="WebWorks_Breadcrumb_Link" href="ws_live.4.1.html#991580">Using Live Debugging Mode</a> : <a class="WebWorks_Breadcrumb_Link" href="ws_live.4.3.html#991580">Prepare the Guest for Live Debugging</a> : Configure User Accounts</div>
+    <hr align="left" />
+    <blockquote>
+      <div class="H2_Heading2"><a name="991580">Configure User Accounts</a></div>
+      <div class="B_Body"><a name="991581">To configure user accounts, log in to the guest operating system with an Administrator account, and establish </a>an appropriate account if necessary.</div>
+      <div class="A_Anchor"><a name="991585">&nbsp;</a></div>
+      <table id="991582" class="N_Note" style="text-align: left;" cellspacing="0">
+        <caption></caption>
+        <tr>
+          <td id="tc991584" style="padding-bottom: 10px; padding-left: 0px; padding-right: 10px; padding-top: 10px; vertical-align: top; width: 428.78664pt;">
+            <div class="zImportantText">
+              <span class="zNoteHeads">Important   </span><a name="991584">The user name, password, and domain name (if not local on both systems) must match on the </a>host and the guest. If they do not match, the Remote Debug Monitor on the guest cannot communicate with the Visual Studio plug-in on the host.</div>
+          </td>
+        </tr>
+      </table>
+      <div class="B_Body"><a name="991586">For more information about how to set up Windows user accounts for live debugging, go to the Microsoft </a>Developer Network Web site, enter the search keywords Error: Remote Debugger Service On the Target Computer Cannot Connect Back, and click the first search result.</div>
+      <div class="B_Body"><a name="991587">Communication between Visual Studio and the guest operating system is not initiated until the virtual </a>machine is powered on and the configured user is logged in. The user runs the Remote Debug Monitor on the guest, which in turn communicates with Visual Studio on the host.</div>
+      <div class="B_Body"><a name="991588">To prevent a delay, power on the virtual machine and log in to the guest operating system before you debug </a>in a virtual machine. You can set up automatic login to bypass the login screen when the guest is booting.</div>
+      <script type="text/javascript" language="JavaScript1.2">
+        <!--
+          // Clear related topics
+          //
+          WWHClearRelatedTopics();
+
+          document.writeln(WWHRelatedTopicsInlineHTML());
+        // -->
+      </script>
+    </blockquote>
+    <hr align="left" />
+    <table align="right"></table>
+    <div class="copyright_info" style="font-family: sans-serif; font-size: 12px"></div>
+    <div class="copyright_info" style="font-family: sans-serif; font-size: 12px; color:gray">
+      <span class="copyright_info" style="font-family: sans-serif; font-size: 8pt; color:gray">
+        <a href="#" onclick="WWHFrame.WWHControls.fClickedEmail()">Send feedback</a> &nbsp;| &nbsp; <a href="http://vmware.com/support/" target="_blank">Technical Support</a> &nbsp;| &nbsp; Copyright © 1998-2009 VMware, Inc. All rights reserved. This product is protected by U.S. and international copyright and intellectual property laws. This product is covered by one or more patents listed in the patent.txt file found at <a href="http://www.vmware.com/go/patents" target="_blank">http://www.vmware.com/go/patents</a>.</span>
+    </div>
+    <script type="text/javascript" language="JavaScript1.2">
+      <!--
+        document.write(WWHRelatedTopicsDivTag() + WWHPopupDivTag() + WWHALinksDivTag());
+      // -->
+    </script>
+  </body>
+</html>

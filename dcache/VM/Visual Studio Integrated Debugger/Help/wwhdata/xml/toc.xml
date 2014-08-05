@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WebWorksHelpTOC version="5.0" xmlns="urn:WebWorks-Help-TOC-Schema">
+  <i t="Introduction" l="0#991647" />
+  <i t="Introduction to Live and Replay Debugging" l="1#991058">
+    <i t="Debugging Modes of the Integrated Virtual Debugger" l="2" />
+    <i t="Replay Debugging as a Break-Through Technology" l="3" />
+    <i t="Requirements for the Integrated Virtual Debugger" l="4">
+      <i t="Prerequisites for Live Debugging Mode" l="5" />
+      <i t="Prerequisites for Replay Debugging Mode" l="6" />
+    </i>
+    <i t="Installing the Integrated Virtual Debugger" l="7">
+      <i t="Programming Languages Supported" l="8" />
+      <i t="Choosing Live Mode or Replay Mode" l="9" />
+    </i>
+  </i>
+  <i t="Using Replay Debugging Mode" l="10#1016792">
+    <i t="Overview of Replay Debugging Mode" l="11" />
+    <i t="Prepare the Host and Guest" l="12">
+      <i t="Prepare the Host System for Replay Debugging" l="13" />
+      <i t="Prepare the Guest System for Replay Debugging" l="14" />
+      <i t="Why All the Preparation?" l="15" />
+    </i>
+    <i t="Configure Visual Studio and the Integrated Virtual Debugger" l="16">
+      <i t="Configure Visual Studio for Replay Debugging" l="17" />
+      <i t="Configure the Integrated Virtual Debugger" l="18" />
+    </i>
+    <i t="Create a Recording" l="19">
+      <i t="Create a Recording Within Visual Studio" l="20" />
+    </i>
+    <i t="Start Replay Debugging" l="21">
+      <i t="Identify the Application for Replay Debugging" l="22" />
+    </i>
+    <i t="Reverse Execution for Debugging" l="23">
+      <i t="What is Reverse Execution?" l="24" />
+      <i t="Start and Stop Reverse Execution" l="25" />
+      <i t="How to Improve Reverse Execution Performance" l="26" />
+    </i>
+    <i t="Remote Replay Debugging" l="27">
+      <i t="Start the Debugging Proxy on a Remote Machine" l="28" />
+      <i t="Configure Visual Studio to Start Remote Debugging" l="29" />
+    </i>
+    <i t="Configuration Properties Reference" l="30">
+      <i t="General Options" l="31" />
+      <i t="Pre-Record Event Options" l="32" />
+      <i t="Post-Record Event Options" l="33" />
+      <i t="Advanced Option" l="34" />
+    </i>
+    <i t="Limitations of Replay Debugging" l="35" />
+  </i>
+  <i t="Using Live Debugging Mode" l="36#994036">
+    <i t="Overview of Live Debugging Mode" l="37" />
+    <i t="Prepare the Guest for Live Debugging" l="38">
+      <i t="Configure the Group Policy Settings for Windows" l="39" />
+      <i t="Disable or Configure the Windows Firewall" l="40" />
+      <i t="Configure User Accounts" l="41" />
+      <i t="Blank Passwords and the Default Password Policy" l="42" />
+      <i t="Suppress Security Prompts on the Guest System" l="43" />
+      <i t="Install the Microsoft .NET Framework to Support Managed Applications" l="44" />
+      <i t="Rename Virtual Machine Computer Names" l="45" />
+      <i t="Install the Remote Debug Monitor Manually on Windows 98 Guests" l="46" />
+      <i t="Start the Remote Debug Monitor Without Authentication on the Default Port" l="47" />
+    </i>
+    <i t="Configure Visual Studio for Live Debugging" l="48">
+      <i t="Configure the Runtime Library Setting for C++ Applications" l="49" />
+    </i>
+    <i t="Configure the Integrated Virtual Debugger for Live Debugging" l="50">
+      <i t="Create Configurations" l="51" />
+      <i t="Set Configuration Properties" l="52" />
+      <i t="Set General Properties" l="53" />
+      <i t="Set Pre-Debug Event Properties" l="54" />
+      <i t="Set Post-Debug Event Properties" l="55" />
+      <i t="Rename a Configuration" l="56" />
+      <i t="Remove a Configuration" l="57" />
+    </i>
+    <i t="Debug Live Applications in Virtual Machines" l="58">
+      <i t="Start a Live Debugging Session in a Virtual Machine" l="59" />
+      <i t="Start a Session Without Debugging in a Virtual Machine" l="60" />
+      <i t="Attach the Debugger to a Process Running in a Virtual Machine" l="61" />
+    </i>
+    <i t="Configuration Properties Reference" l="62">
+      <i t="General Options" l="63" />
+      <i t="Pre-Debug Event Options" l="64" />
+      <i t="Post-Debug Event Options" l="65" />
+    </i>
+  </i>
+  <i t="Troubleshooting Live and Replay Debugging" l="66#994036">
+    <i t="Reporting Bugs and Viewing Log Files" l="67">
+      <i t="Files Maintained by the Integrated Virtual Debugger" l="68" />
+    </i>
+    <i t="Live Debugging Tips" l="69">
+      <i t="Cannot Change Shortcut Keys" l="70" />
+      <i t="Live Debugging Session Does Not Start" l="71" />
+      <i t="Cannot Exit Visual Studio with Powered On Virtual Machine" l="72" />
+      <i t="Cannot Prevent VMDebugger Add-in from Loading" l="73" />
+      <i t="Need to Clean Up After a Failure to Debug Locally" l="74" />
+      <i t="Visual Studio 2005 Fails in Vista" l="75" />
+    </i>
+    <i t="Replay Debugging Tips" l="76">
+      <i t="File Not Found Before Shared Folders Enabled" l="77" />
+      <i t="Recordings Numbered but Not Named" l="78" />
+      <i t="Cannot Replay a Recording Created in Workstation 6.5" l="79" />
+      <i t="An Application Does Not Run in the Guest System" l="80" />
+    </i>
+  </i>
+  <i t="Index" l="81" />
+</WebWorksHelpTOC>

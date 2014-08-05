@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xml:lang="en" lang="en" xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <meta http-equiv="Content-Style-Type" content="text/css" />
+    <!-- saved from url=(0014)about:internet -->
+    <title>Create a Recording Within Visual Studio</title>
+    <link rel="StyleSheet" href="css/ws_replay.css" type="text/css" media="all" />
+    <link rel="StyleSheet" href="css/webworks.css" type="text/css" media="all" />
+    <script type="text/javascript" language="JavaScript1.2" src="wwhdata/common/context.js"></script>
+    <script type="text/javascript" language="JavaScript1.2" src="wwhdata/common/towwhdir.js"></script>
+    <script type="text/javascript" language="JavaScript1.2" src="wwhdata/common/wwhpagef.js"></script>
+    <script type="text/javascript" language="JavaScript1.2">
+      <!--
+        var  WebWorksRootPath = "";
+      // -->
+    </script>
+    <script type="text/javascript" language="JavaScript1.2">
+      <!--
+        // Set reference to top level help frame
+        //
+        var  WWHFrame = WWHGetWWHFrame("", true);
+      // -->
+    </script>
+    <script type="text/javascript" language="JavaScript1.2" src="scripts/expand.js"></script>
+  </head>
+  <body style="" onLoad="WWHUpdate();" onUnload="WWHUnload();" onKeyDown="WWHHandleKeyDown((document.all||document.getElementById||document.layers)?event:null);" onKeyPress="WWHHandleKeyPress((document.all||document.getElementById||document.layers)?event:null);" onKeyUp="WWHHandleKeyUp((document.all||document.getElementById||document.layers)?event:null);">
+    <br />
+    <div class="WebWorks_Breadcrumbs" style="text-align: left;">
+      <a class="WebWorks_Breadcrumb_Link" href="ws_replay.3.1.html#1017037">Using Replay Debugging Mode</a> : <a class="WebWorks_Breadcrumb_Link" href="ws_replay.3.10.html#1017037">Create a Recording</a> : Create a Recording Within Visual Studio</div>
+    <hr align="left" />
+    <blockquote>
+      <div class="H2_Heading2"><a name="1017037">Create a Recording Within Visual Studio</a></div>
+      <div class="B_Body"><a name="1017039">Before you create a recording, start with a built and working project.</a></div>
+      <div class="P_ProcedureHead"><a name="1017040">To create a recording from Visual Studio</a></div>
+      <div class="L1F_List1First_outer" style="margin-left: 1pt;">
+        <table border="0" cellspacing="0" cellpadding="0" id="SummaryNotRequired_np1017041">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="L1F_List1First_inner" style="width: 17pt; white-space: nowrap;">1	</div>
+            </td>
+            <td width="100%">
+              <div class="L1F_List1First_inner"><a name="1017041">In Visual Studio, select </a><span class="Interface">VMware &gt; Create Recording for Replay</span>.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="L1_List1_outer" style="margin-left: 1pt;">
+        <table border="0" cellspacing="0" cellpadding="0" id="SummaryNotRequired_np1024694">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="L1_List1_inner" style="width: 17pt; white-space: nowrap;">2	</div>
+            </td>
+            <td width="100%">
+              <div class="L1_List1_inner"><a name="1024694">You are prompted for the guest login and password.</a></div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="B1_BodyIndent"><a name="1019012">The Integrated Virtual Debugger runs the </a><span class="Interface">Command Line </span>specified<span class="Interface"> </span>for pre-record event and post-record event, and updates the configuration options to use the new recording in subsequent debugging sessions. See <span class="zlink"><a href="javascript:WWHClickedPopup('help_ws_vsid', 'ws_replay.3.23.html#1022327', '');">Pre-Record Event Options</a></span> and <span class="zlink"><a href="javascript:WWHClickedPopup('help_ws_vsid', 'ws_replay.3.24.html#1022349', '');">Post-Record Event Options</a></span>.</div>
+      <div class="L1_List1_outer" style="margin-left: 1pt;">
+        <table border="0" cellspacing="0" cellpadding="0" id="SummaryNotRequired_np1024669">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="L1_List1_inner" style="width: 17pt; white-space: nowrap;">3	</div>
+            </td>
+            <td width="100%">
+              <div class="L1_List1_inner"><a name="1024669">(Optional) Add replay snapshots to the recording. If the recording is long, VMware recommends that you </a>add replay snapshots manually to your recording, or enable automatic snapshots (see below).</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="H3_Heading3"><a name="1024908">Add Replay Snapshots During a Recording</a></div>
+      <div class="B_Body"><a name="1017054">Replay snapshots take a replay-specific snapshot at the current location within a recording. Later during a </a>debugging session, you can attach to your application process starting with a specific replay snapshot, instead of replaying the entire recording from the beginning. This is useful when you have long recordings. </div>
+      <div class="B_Body"><a name="1024896">To add replay snapshots during a recording, click </a><span class="Interface">Add Snapshot </span>in the recording dialog box. The application that you are debugging must be running when you add the replay snapshot to the recording.</div>
+      <div class="P_ProcedureHead"><a name="1017059">To enable automatic snapshots</a></div>
+      <div class="L1F_List1First_outer" style="margin-left: 1pt;">
+        <table border="0" cellspacing="0" cellpadding="0" id="SummaryNotRequired_np1017060">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="L1F_List1First_inner" style="width: 17pt; white-space: nowrap;">1	</div>
+            </td>
+            <td width="100%">
+              <div class="L1F_List1First_inner"><a name="1017060">Power off the virtual machine.</a></div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="L1_List1_outer" style="margin-left: 1pt;">
+        <table border="0" cellspacing="0" cellpadding="0" id="SummaryNotRequired_np1030160">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="L1_List1_inner" style="width: 17pt; white-space: nowrap;">2	</div>
+            </td>
+            <td width="100%">
+              <div class="L1_List1_inner"><a name="1030160">From the Workstation menu bar, select </a><span class="Interface">VM &gt; Settings</span>.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="L1_List1_outer" style="margin-left: 1pt;">
+        <table border="0" cellspacing="0" cellpadding="0" id="SummaryNotRequired_np1017061">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="L1_List1_inner" style="width: 17pt; white-space: nowrap;">3	</div>
+            </td>
+            <td width="100%">
+              <div class="L1_List1_inner"><a name="1017061">Click the </a><span class="Interface">Options </span>tab.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="L1_List1_outer" style="margin-left: 1pt;">
+        <table border="0" cellspacing="0" cellpadding="0" id="SummaryNotRequired_np1017062">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="L1_List1_inner" style="width: 17pt; white-space: nowrap;">4	</div>
+            </td>
+            <td width="100%">
+              <div class="L1_List1_inner"><a name="1017062">Select </a><span class="Interface">Replay</span> and in the right pane, set the <span class="Interface">Snapshot Frequency</span> option.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="H4_Heading4"><a name="1030123">Troubleshooting DLL Problems</a></div>
+      <div class="B_Body"><a name="1030198">If your program does not appear to start in the guest, it might be because the program cannot run in the guest, </a>perhaps due to a missing DLL. To help diagnose this issue, copy your program from the host to the guest and try to run it on the guest.</div>
+      <script type="text/javascript" language="JavaScript1.2">
+        <!--
+          // Clear related topics
+          //
+          WWHClearRelatedTopics();
+
+          document.writeln(WWHRelatedTopicsInlineHTML());
+        // -->
+      </script>
+    </blockquote>
+    <hr align="left" />
+    <table align="right"></table>
+    <div class="copyright_info" style="font-family: sans-serif; font-size: 12px"></div>
+    <div class="copyright_info" style="font-family: sans-serif; font-size: 12px; color:gray">
+      <span class="copyright_info" style="font-family: sans-serif; font-size: 8pt; color:gray">
+        <a href="#" onclick="WWHFrame.WWHControls.fClickedEmail()">Send feedback</a> &nbsp;| &nbsp; <a href="http://vmware.com/support/" target="_blank">Technical Support</a> &nbsp;| &nbsp; Copyright © 1998-2009 VMware, Inc. All rights reserved. This product is protected by U.S. and international copyright and intellectual property laws. This product is covered by one or more patents listed in the patent.txt file found at <a href="http://www.vmware.com/go/patents" target="_blank">http://www.vmware.com/go/patents</a>.</span>
+    </div>
+    <script type="text/javascript" language="JavaScript1.2">
+      <!--
+        document.write(WWHRelatedTopicsDivTag() + WWHPopupDivTag() + WWHALinksDivTag());
+      // -->
+    </script>
+  </body>
+</html>

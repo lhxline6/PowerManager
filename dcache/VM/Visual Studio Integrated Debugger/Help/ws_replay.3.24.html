@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xml:lang="en" lang="en" xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <meta http-equiv="Content-Style-Type" content="text/css" />
+    <!-- saved from url=(0014)about:internet -->
+    <title>Post-Record Event Options</title>
+    <link rel="StyleSheet" href="css/ws_replay.css" type="text/css" media="all" />
+    <link rel="StyleSheet" href="css/webworks.css" type="text/css" media="all" />
+    <script type="text/javascript" language="JavaScript1.2" src="wwhdata/common/context.js"></script>
+    <script type="text/javascript" language="JavaScript1.2" src="wwhdata/common/towwhdir.js"></script>
+    <script type="text/javascript" language="JavaScript1.2" src="wwhdata/common/wwhpagef.js"></script>
+    <script type="text/javascript" language="JavaScript1.2">
+      <!--
+        var  WebWorksRootPath = "";
+      // -->
+    </script>
+    <script type="text/javascript" language="JavaScript1.2">
+      <!--
+        // Set reference to top level help frame
+        //
+        var  WWHFrame = WWHGetWWHFrame("", true);
+      // -->
+    </script>
+    <script type="text/javascript" language="JavaScript1.2" src="scripts/expand.js"></script>
+  </head>
+  <body style="" onLoad="WWHUpdate();" onUnload="WWHUnload();" onKeyDown="WWHHandleKeyDown((document.all||document.getElementById||document.layers)?event:null);" onKeyPress="WWHHandleKeyPress((document.all||document.getElementById||document.layers)?event:null);" onKeyUp="WWHHandleKeyUp((document.all||document.getElementById||document.layers)?event:null);">
+    <br />
+    <div class="WebWorks_Breadcrumbs" style="text-align: left;">
+      <a class="WebWorks_Breadcrumb_Link" href="ws_replay.3.1.html#1022349">Using Replay Debugging Mode</a> : <a class="WebWorks_Breadcrumb_Link" href="ws_replay.3.21.html#1022349">Configuration Properties Reference</a> : Post-Record Event Options</div>
+    <hr align="left" />
+    <blockquote>
+      <div class="H2_Heading2"><a name="1022349">Post-Record Event Options</a></div>
+      <div class="B_Body"><a name="1027392">The post-record options pertain to actions taken after a recording is created.</a></div>
+      <div class="A_Anchor"><a name="1025915">&nbsp;</a></div>
+      <table id="1022328" class="T_Table" style="text-align: left;" cellspacing="0">
+        <caption>
+          <div class="TT_TableTitle">
+            <span class="bold">Table&nbsp;2-3.  </span><a name="1022330">Post-Record Event Configuration Properties</a></div>
+        </caption>
+        <tr>
+          <td id="tc1022334" style="border-bottom-color: Gainsboro; border-bottom-style: solid; border-bottom-width: thin; border-left-color: Gainsboro; border-left-style: solid; border-left-width: thin; border-right-color: Gainsboro; border-right-style: solid; border-right-width: thin; border-top-color: Gainsboro; border-top-style: solid; border-top-width: 0.8pt; padding-bottom: 10px; padding-left: 10px; padding-right: 10px; padding-top: 10px; vertical-align: bottom; width: 86.54112pt;">
+            <div class="TH_TableHead"><a name="1022334">Option Name</a></div>
+          </td>
+          <td id="tc1022336" style="border-bottom-color: Gainsboro; border-bottom-style: solid; border-bottom-width: thin; border-left-color: Gainsboro; border-left-style: solid; border-left-width: thin; border-right-color: Gainsboro; border-right-style: solid; border-right-width: thin; border-top-color: Gainsboro; border-top-style: solid; border-top-width: 0.8pt; padding-bottom: 10px; padding-left: 10px; padding-right: 10px; padding-top: 10px; vertical-align: bottom; width: 345.45888pt;">
+            <div class="TH_TableHead"><a name="1022336">Function</a></div>
+          </td>
+        </tr>
+        <tr>
+          <td id="tc1022338" style="border-bottom-color: Gainsboro; border-bottom-style: solid; border-bottom-width: thin; border-left-color: Gainsboro; border-left-style: solid; border-left-width: thin; border-right-color: Gainsboro; border-right-style: solid; border-right-width: thin; border-top-color: Gainsboro; border-top-style: solid; border-top-width: thin; padding-bottom: 10px; padding-left: 10px; padding-right: 10px; padding-top: 10px; vertical-align: top;">
+            <div class="TC_TableCell" style="color: #000000; font-style: normal; font-variant: normal; font-weight: bold; text-transform: none; vertical-align: baseline;"><span class="Interface"><a name="1022338">Command Line</a></span></div>
+          </td>
+          <td id="tc1028831" style="border-bottom-color: Gainsboro; border-bottom-style: solid; border-bottom-width: thin; border-left-color: Gainsboro; border-left-style: solid; border-left-width: thin; border-right-color: Gainsboro; border-right-style: solid; border-right-width: thin; border-top-color: Gainsboro; border-top-style: solid; border-top-width: thin; padding-bottom: 10px; padding-left: 10px; padding-right: 10px; padding-top: 10px; vertical-align: top;">
+            <div class="TC_TableCell"><a name="1027565">Specifies a command line to run after a recording ends. You can specify multiple commands by </a>separating them with a semicolon (;). This configuration property is optional.</div>
+            <div class="TC_TableCell"><a name="1028841">The post-record line must specify a command, </a><span class="C_Command">cscript.exe</span> for example. To run a script, explicitly specify the script processor command, with the script as a parameter. For example:</div>
+            <div class="TC_TableCell" style="color: #000000; font-style: normal; font-variant: normal; font-weight: normal; text-transform: none; vertical-align: baseline;"><span class="C_Command"><a name="1028831">perl.exe myscript.pl</a></span></div>
+          </td>
+        </tr>
+        <tr>
+          <td id="tc1022342" style="border-bottom-color: Gainsboro; border-bottom-style: solid; border-bottom-width: thin; border-left-color: Gainsboro; border-left-style: solid; border-left-width: thin; border-right-color: Gainsboro; border-right-style: solid; border-right-width: thin; border-top-color: Gainsboro; border-top-style: solid; border-top-width: thin; padding-bottom: 10px; padding-left: 10px; padding-right: 10px; padding-top: 10px; vertical-align: top;">
+            <div class="TC_TableCell" style="color: #000000; font-style: normal; font-variant: normal; font-weight: bold; text-transform: none; vertical-align: baseline;"><span class="Interface"><a name="1022342">Termination Mode</a></span></div>
+          </td>
+          <td id="tc1022348" style="border-bottom-color: Gainsboro; border-bottom-style: solid; border-bottom-width: thin; border-left-color: Gainsboro; border-left-style: solid; border-left-width: thin; border-right-color: Gainsboro; border-right-style: solid; border-right-width: thin; border-top-color: Gainsboro; border-top-style: solid; border-top-width: thin; padding-bottom: 10px; padding-left: 10px; padding-right: 10px; padding-top: 10px; vertical-align: top;">
+            <div class="TC_TableCell"><a name="1022344">Specifies what should be done to the state of the virtual machine after a recording finishes.</a></div>
+            <div class="TB_TableBulletList_outer" style="margin-left: 0pt;">
+              <table border="0" cellspacing="0" cellpadding="0" id="SummaryNotRequired_np1022345">
+                <tr style="vertical-align: baseline;">
+                  <td>
+                    <div class="TB_TableBulletList_inner" style="width: 14.4pt; white-space: nowrap;">•</div>
+                  </td>
+                  <td width="100%">
+                    <div class="TB_TableBulletList_inner"><span class="Interface"><a name="1022345">No operation</a></span> – The virtual machine is left in the same state.</div>
+                  </td>
+                </tr>
+              </table>
+            </div>
+            <div class="TB_TableBulletList_outer" style="margin-left: 0pt;">
+              <table border="0" cellspacing="0" cellpadding="0" id="SummaryNotRequired_np1022346">
+                <tr style="vertical-align: baseline;">
+                  <td>
+                    <div class="TB_TableBulletList_inner" style="width: 14.4pt; white-space: nowrap;">•</div>
+                  </td>
+                  <td width="100%">
+                    <div class="TB_TableBulletList_inner"><span class="Interface"><a name="1022346">Shutdown</a></span> – The virtual machine is powered off.</div>
+                  </td>
+                </tr>
+              </table>
+            </div>
+            <div class="TB_TableBulletList_outer" style="margin-left: 0pt;">
+              <table border="0" cellspacing="0" cellpadding="0" id="SummaryNotRequired_np1022347">
+                <tr style="vertical-align: baseline;">
+                  <td>
+                    <div class="TB_TableBulletList_inner" style="width: 14.4pt; white-space: nowrap;">•</div>
+                  </td>
+                  <td width="100%">
+                    <div class="TB_TableBulletList_inner"><span class="Interface"><a name="1022347">Revert to Parent Snapshot </a></span>–<span class="Interface"> </span>The virtual machine is reverted to the snapshot that is the parent of the current position in the snapshot tree.</div>
+                  </td>
+                </tr>
+              </table>
+            </div>
+            <div class="TB_TableBulletList_outer" style="margin-left: 0pt;">
+              <table border="0" cellspacing="0" cellpadding="0" id="SummaryNotRequired_np1022348">
+                <tr style="vertical-align: baseline;">
+                  <td>
+                    <div class="TB_TableBulletList_inner" style="width: 14.4pt; white-space: nowrap;">•</div>
+                  </td>
+                  <td width="100%">
+                    <div class="TB_TableBulletList_inner"><span class="Interface"><a name="1022348">Suspend </a></span>– The virtual machine is suspended.</div>
+                  </td>
+                </tr>
+              </table>
+            </div>
+          </td>
+        </tr>
+      </table>
+      <script type="text/javascript" language="JavaScript1.2">
+        <!--
+          // Clear related topics
+          //
+          WWHClearRelatedTopics();
+
+          document.writeln(WWHRelatedTopicsInlineHTML());
+        // -->
+      </script>
+    </blockquote>
+    <hr align="left" />
+    <table align="right"></table>
+    <div class="copyright_info" style="font-family: sans-serif; font-size: 12px"></div>
+    <div class="copyright_info" style="font-family: sans-serif; font-size: 12px; color:gray">
+      <span class="copyright_info" style="font-family: sans-serif; font-size: 8pt; color:gray">
+        <a href="#" onclick="WWHFrame.WWHControls.fClickedEmail()">Send feedback</a> &nbsp;| &nbsp; <a href="http://vmware.com/support/" target="_blank">Technical Support</a> &nbsp;| &nbsp; Copyright © 1998-2009 VMware, Inc. All rights reserved. This product is protected by U.S. and international copyright and intellectual property laws. This product is covered by one or more patents listed in the patent.txt file found at <a href="http://www.vmware.com/go/patents" target="_blank">http://www.vmware.com/go/patents</a>.</span>
+    </div>
+    <script type="text/javascript" language="JavaScript1.2">
+      <!--
+        document.write(WWHRelatedTopicsDivTag() + WWHPopupDivTag() + WWHALinksDivTag());
+      // -->
+    </script>
+  </body>
+</html>

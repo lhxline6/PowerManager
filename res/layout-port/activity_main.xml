@@ -1,0 +1,88 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical"
+    android:background="#F2F2F2" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <Button
+            android:id="@+id/button1"
+            android:layout_width="wrap_content"
+            android:layout_height="60dp"
+            android:layout_weight="1"
+            android:background="@drawable/cone"
+            android:text="" />
+
+        <Button
+            android:id="@+id/button2"
+            android:layout_width="wrap_content"
+            android:layout_height="60dp"
+            android:layout_weight="1"
+            android:background="@drawable/ctwo"
+            android:text="" />
+
+        <Button
+            android:id="@+id/button3"
+            android:layout_width="wrap_content"
+            android:layout_weight="1"
+            android:layout_height="60dp"
+            android:background="@drawable/othree"
+            android:text="" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:background="#FF0000"
+        android:padding="10dp" >
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="20dp"
+            android:background="@android:color/white"
+            android:padding="1dp" >
+
+            <ImageView
+                android:layout_width="55dp"
+                android:layout_height="55dp"
+                android:background="@drawable/img_person_icon"
+                android:contentDescription="@string/person_icon" />
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginLeft="10dp"
+            android:gravity="left"
+            android:id="@+id/title"
+            
+            android:color="#000000"
+            android:textSize="30sp" />
+    </LinearLayout>
+    
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:background="#F2F2F2"
+        android:layout_height="fill_parent"
+        android:orientation="vertical" >
+
+        <ListView
+            android:id="@+id/listView1"
+            android:layout_marginTop="20dp"
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center" >
+
+        </ListView>
+
+    </LinearLayout>
+
+</LinearLayout>

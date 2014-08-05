@@ -1,0 +1,86 @@
+function  WWHBookData_AddIndexEntries(P)
+{
+var A=P.fA("A",null,null,"002");
+var B=A.fA("add replay snapshot",new Array("20#1017054"));
+A=P.fA("C",null,null,"002");
+B=A.fA("configurations in live debugging");
+var C=B.fA("removing",new Array("57#991740"));
+C=B.fA("renaming",new Array("56#991726"));
+B=A.fA("create a recording using Visual Studio",new Array("19#1017036"));
+A=P.fA("D",null,null,"002");
+B=A.fA("debugging");
+C=B.fA("attaching to a process in a virtual machine",new Array("61#991779"));
+C=B.fA("modes in the Integrated Virtual Debugger",new Array("2#995557"));
+B=A.fA("debugging modes",new Array("2#995557"));
+B=A.fA("debugging recording application",new Array("21#1025551"));
+B=A.fA("disable kernel-mode stacks paging",new Array("14#1016876"));
+B=A.fA("documentation");
+C=B.fA("getting the latest versions of",new Array("0#991491"));
+A=P.fA("E",null,null,"002");
+B=A.fA("enable automatic snapshots",new Array("20#1017054"));
+A=P.fA("G",null,null,"002");
+B=A.fA("guest operating system");
+C=B.fA("where to find installation information",new Array("0#991491"));
+A=P.fA("I",null,null,"002");
+B=A.fA("install Remote Debug Monitor",new Array("46#991618"));
+B=A.fA("installing");
+C=B.fA("guest operating systems",new Array("0#991491"));
+B=A.fA("Integrated Virtual Debugger");
+C=B.fA("configuring for live debugging",new Array("50#991654"));
+C=B.fA("environment",new Array("68#996642"));
+C=B.fA("Visual Studio",new Array("1#991457"));
+A=P.fA("L",null,null,"002");
+B=A.fA("live debugging");
+C=B.fA("configuring",new Array("38#991561"));
+C=B.fA("configuring Windows XP firewall",new Array("40#991577"));
+C=B.fA("starting in a virtual machine",new Array("59#991754"));
+C=B.fA("using",new Array("37#999401"));
+A=P.fA("M",null,null,"002");
+B=A.fA("msvsmon.exe program",new Array("5#996334"));
+A=P.fA("N",null,null,"002");
+B=A.fA(".NET framework, Microsoft",new Array("44#991608"),"NET framework, Microsoft");
+A=P.fA("R",null,null,"002");
+B=A.fA("Remote Debug Monitor",new Array("5#996334"));
+B=A.fA("replay debugging");
+C=B.fA("configuration properties",new Array("30#1026328","62#1001320"));
+C=B.fA("configure Visual Studio",new Array("16#1023540"));
+C=B.fA("configuring",new Array("12#1016860"));
+C=B.fA("limitations",new Array("35#1028561"));
+C=B.fA("prepare guest",new Array("14#1016870"));
+C=B.fA("prepare host",new Array("13#1029584"));
+C=B.fA("set general properties",new Array("31#1026376","63#1001261"));
+C=B.fA("set pre-record properties",new Array("32#1027350","64#1001446"));
+C=B.fA("using reverse execution",new Array("24#1017122"));
+B=A.fA("replay debugging mode",new Array("10#1016797"));
+A=P.fA("S",null,null,"002");
+B=A.fA("starting");
+C=B.fA("live debugging session in a virtual machine",new Array("59#991754"));
+C=B.fA("reverse execution",new Array("25#1017129"));
+C=B.fA("session in a virtual machine without debugging",new Array("60#991764"));
+B=A.fA("stop reverse execution",new Array("25#1017132"));
+B=A.fA("supported guest operating system");
+C=B.fA("for live debugging",new Array("5#996346"));
+C=B.fA("for replay debugging",new Array("6#996277"));
+B=A.fA("supported programming languages");
+C=B.fA("for live debugging",new Array("5#996338"));
+C=B.fA("for replay debugging",new Array("6#996269"));
+B=A.fA("supported versions");
+C=B.fA("for live debugging",new Array("5#996334"));
+C=B.fA("for replay debugging",new Array("6#996265"));
+B=A.fA("system requirements");
+C=B.fA("for live debugging",new Array("5#997681"));
+C=B.fA("for replay debugging",new Array("6#996273"));
+A=P.fA("T",null,null,"002");
+B=A.fA("troubleshooting");
+C=B.fA("live debugging",new Array("69#994845"));
+C=B.fA("replay debugging",new Array("76#994872"));
+A=P.fA("U",null,null,"002");
+B=A.fA("using reverse execution",new Array("24#1017122"));
+A=P.fA("W",null,null,"002");
+B=A.fA("Windows group policy settings",new Array("39#991568"));
+}
+
+function  WWHBookData_MaxIndexLevel()
+{
+  return 3;
+}

@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+     Copyright (C) 2009 Teleca Poland Sp. z o.o. <android@teleca.com> Licensed 
+	under the Apache License, Version 2.0 (the "License"); you may not use this 
+	file except in compliance with the License. You may obtain a copy of the 
+	License at http://www.apache.org/licenses/LICENSE-2.0 Unless required by 
+	applicable law or agreed to in writing, software distributed under the License 
+	is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY 
+	KIND, either express or implied. See the License for the specific language 
+	governing permissions and limitations under the License.
+-->
+
+<!-- <selector xmlns:android="http://schemas.android.com/apk/res/android"> -->
+<!-- <item> -->
+<!-- <shape android:shape="rectangle"> -->
+<!-- <gradient android:startColor="#3C3D3F" android:endColor="#3C3D3F" -->
+<!-- android:angle="270" /> -->
+<!-- <corners android:radius="2dp" /> -->
+<!-- </shape> -->
+<!-- </item> -->
+<!-- <item android:state_pressed="true"> -->
+<!-- <shape android:shape="rectangle"> -->
+<!-- <gradient android:startColor="#FF9000" android:endColor="#FF9000" -->
+<!-- android:angle="270" /> -->
+<!-- <corners android:radius="2dp" /> -->
+<!-- </shape> -->
+<!--
+gradient 主体渐变 startColor开始颜色，endColor结束颜色 ，angle开始渐变的角度（值只能为90的倍数，0时为左到右渐变，90时为下到上渐变，依次逆时针类推）
+stroke 边框 width 边框宽度，color 边框颜色
+corners 圆角 radius 半径，0为直角
+padding text值的相对位置
+-->
+<!-- </selector> -->
+
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:state_pressed="true"><shape>
+            <gradient android:angle="90" android:endColor="#BBFEFF" android:startColor="#BBFEFF" />
+
+            <stroke android:width="1dip" android:color="@android:color/darker_gray" />
+
+            <corners android:topLeftRadius="6dip" android:topRightRadius="6dip" />
+        </shape></item>
+    <item android:state_pressed="false"><shape>
+            <gradient android:angle="90" android:endColor="@android:color/white" android:startColor="@android:color/white" />
+
+            <stroke android:width="1dip" android:color="@android:color/darker_gray" />
+
+            <corners android:topLeftRadius="6dip" android:topRightRadius="6dip" />
+        </shape></item>
+
+</selector>

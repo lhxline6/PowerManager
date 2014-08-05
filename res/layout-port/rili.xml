@@ -1,0 +1,59 @@
+
+    <AbsoluteLayout xmlns:android="http://schemas.android.com/apk/res/android"
+       
+        android:background="#F2F2F2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+ <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <Button
+            android:id="@+id/button1"
+            android:layout_width="wrap_content"
+            android:layout_height="60dp"
+            android:layout_weight="1"
+            android:background="@drawable/cone"
+            android:text="" />
+        <Button
+            android:id="@+id/button2"
+            android:layout_width="wrap_content"
+            android:layout_height="60dp"
+            android:layout_weight="1"
+            android:background="@drawable/otwo"
+            android:text="" />
+        <Button
+            android:id="@+id/button3"
+            android:layout_width="wrap_content"
+            android:layout_weight="1"
+            android:layout_height="60dp"
+            android:background="@drawable/cthree"
+            android:text="" />
+    </LinearLayout>
+     
+<ScrollView
+    android:layout_width="fill_parent"
+    android:layout_height="422dp"
+    android:layout_y="60dp"
+    android:background="#F2F2F2"
+    android:orientation="vertical" >
+     
+    <AbsoluteLayout
+        android:id="@+id/ably"
+        android:layout_width="match_parent"
+        android:layout_height="797dp"
+        android:background="#F2F2F2" >
+        
+        <ListView
+            android:id="@+id/listView1"
+            android:layout_width="match_parent"
+            android:layout_height="812dp"
+            android:layout_y="0dp" >
+
+        </ListView>
+   </AbsoluteLayout>
+        
+
+</ScrollView>
+
+ </AbsoluteLayout>

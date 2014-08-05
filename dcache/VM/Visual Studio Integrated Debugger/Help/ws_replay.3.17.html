@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xml:lang="en" lang="en" xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <meta http-equiv="Content-Style-Type" content="text/css" />
+    <!-- saved from url=(0014)about:internet -->
+    <title>How to Improve Reverse Execution Performance</title>
+    <link rel="StyleSheet" href="css/ws_replay.css" type="text/css" media="all" />
+    <link rel="StyleSheet" href="css/webworks.css" type="text/css" media="all" />
+    <script type="text/javascript" language="JavaScript1.2" src="wwhdata/common/context.js"></script>
+    <script type="text/javascript" language="JavaScript1.2" src="wwhdata/common/towwhdir.js"></script>
+    <script type="text/javascript" language="JavaScript1.2" src="wwhdata/common/wwhpagef.js"></script>
+    <script type="text/javascript" language="JavaScript1.2">
+      <!--
+        var  WebWorksRootPath = "";
+      // -->
+    </script>
+    <script type="text/javascript" language="JavaScript1.2">
+      <!--
+        // Set reference to top level help frame
+        //
+        var  WWHFrame = WWHGetWWHFrame("", true);
+      // -->
+    </script>
+    <script type="text/javascript" language="JavaScript1.2" src="scripts/expand.js"></script>
+  </head>
+  <body style="" onLoad="WWHUpdate();" onUnload="WWHUnload();" onKeyDown="WWHHandleKeyDown((document.all||document.getElementById||document.layers)?event:null);" onKeyPress="WWHHandleKeyPress((document.all||document.getElementById||document.layers)?event:null);" onKeyUp="WWHHandleKeyUp((document.all||document.getElementById||document.layers)?event:null);">
+    <br />
+    <div class="WebWorks_Breadcrumbs" style="text-align: left;">
+      <a class="WebWorks_Breadcrumb_Link" href="ws_replay.3.1.html#1017133">Using Replay Debugging Mode</a> : <a class="WebWorks_Breadcrumb_Link" href="ws_replay.3.14.html#1017133">Reverse Execution for Debugging</a> : How to Improve Reverse Execution Performance</div>
+    <hr align="left" />
+    <blockquote>
+      <div class="H2_Heading2"><a name="1017133">How to Improve Reverse Execution Performance</a></div>
+      <div class="B_Body"><a name="1017134">With an understanding of the implementation of reverse execution and the overheads it entails, you can take </a>steps to improve performance and optimize your debugging experience. During replay debugging, you are debugging a program at time <span class="Emphasis">t</span> in a recording. Reverse execution from time <span class="Emphasis">t</span> is implemented by replaying the recording to some time <span class="Emphasis">p</span> prior to <span class="Emphasis">t</span>. The reverse execution engine finds the appropriate time <span class="Emphasis">p</span> corresponding to the last debugging event (exception, breakpoint, thread creation, DLL loading) by replaying from the previous snapshot in the recording back to time <span class="Emphasis">p</span>, displaying the events encountered in the recording.</div>
+      <div class="B_Body"><a name="1018547">If the engine does not find any events, it iteratively initiates the same process from earlier snapshots until an </a>event is found. Next, the reverse execution engine replays to the time of the last event, at time <span class="Emphasis">p</span>, and delivers the event to the debugger. For the Integrated Virtual Debugger, the state of the target application has evolved from that at time <span class="Emphasis">t</span> to that at time <span class="Emphasis">p</span>, which occurred in the past, thus giving the illusion of reverse execution.</div>
+      <div class="B_Body"><a name="1030430">Reverse execution includes three kinds of overhead, all of which can be significant yet controllable. The three </a>are replay overhead, replay snapshot restore overhead, and overhead due to repeated replay steps.</div>
+      <div class="BL_BulletList_outer" style="margin-left: 1pt;">
+        <table border="0" cellspacing="0" cellpadding="0" id="SummaryNotRequired_np1017136">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="BL_BulletList_inner" style="width: 17pt; white-space: nowrap;">•</div>
+            </td>
+            <td width="100%">
+              <div class="BL_BulletList_inner"><a name="1017136">Reverse execution is implemented by replaying portions of the recording. To reduce the replay overhead, </a>you can add replay snapshots while recording or debugging so that smaller segments of the recording need to be replayed. If you can identify a point in the recording that you are likely not to go past backward, place a snapshot there. The snapshot prevents replaying all the recording before this point. Adding more replay snapshots often reduces the replay overhead, but you must balance this benefit with the added disk space overhead of replay snapshots and replay snapshot restore overhead.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="BL_BulletList_outer" style="margin-left: 1pt;">
+        <table border="0" cellspacing="0" cellpadding="0" id="SummaryNotRequired_np1017137">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="BL_BulletList_inner" style="width: 17pt; white-space: nowrap;">•</div>
+            </td>
+            <td width="100%">
+              <div class="BL_BulletList_inner"><a name="1017137">Replay snapshot restore overhead comes from the fact that every replay step starts by restoring a </a>snapshot, which takes a nontrivial interval of time. The cost of snapshot restore is primarily determined by the cost of reading the virtual machine’s RAM and video memory from disk. You can reduce replay snapshot restore overhead by reducing the virtual machine RAM and video memory if the applications that you are debugging in the virtual machine allow it. For more information on setting virtual machine hardware options, see the <span class="Title">VMware Workstation User's Manual</span>.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="BL_BulletList_outer" style="margin-left: 1pt;">
+        <table border="0" cellspacing="0" cellpadding="0" id="SummaryNotRequired_np1025767">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="BL_BulletList_inner" style="width: 17pt; white-space: nowrap;">•</div>
+            </td>
+            <td width="100%">
+              <div class="BL_BulletList_inner"><a name="1025767">Reverse execution often requires multiple replay steps when the previous event does not cause Visual </a>Studio to change from running mode to debugging mode. In this circumstance, Visual Studio continues execution, requiring additional replay steps to find the next previous event. For example, when you set a conditional breakpoint on a statement so that only the 100th occurrence of the breakpoint is hit, an extra replay step is required for each occurrence of the breakpoint even though execution only stops on the 100th occurrence. To avoid this overhead, VMware recommends disabling conditional breakpoints while using reverse execution.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <script type="text/javascript" language="JavaScript1.2">
+        <!--
+          // Clear related topics
+          //
+          WWHClearRelatedTopics();
+
+          document.writeln(WWHRelatedTopicsInlineHTML());
+        // -->
+      </script>
+    </blockquote>
+    <hr align="left" />
+    <table align="right"></table>
+    <div class="copyright_info" style="font-family: sans-serif; font-size: 12px"></div>
+    <div class="copyright_info" style="font-family: sans-serif; font-size: 12px; color:gray">
+      <span class="copyright_info" style="font-family: sans-serif; font-size: 8pt; color:gray">
+        <a href="#" onclick="WWHFrame.WWHControls.fClickedEmail()">Send feedback</a> &nbsp;| &nbsp; <a href="http://vmware.com/support/" target="_blank">Technical Support</a> &nbsp;| &nbsp; Copyright © 1998-2009 VMware, Inc. All rights reserved. This product is protected by U.S. and international copyright and intellectual property laws. This product is covered by one or more patents listed in the patent.txt file found at <a href="http://www.vmware.com/go/patents" target="_blank">http://www.vmware.com/go/patents</a>.</span>
+    </div>
+    <script type="text/javascript" language="JavaScript1.2">
+      <!--
+        document.write(WWHRelatedTopicsDivTag() + WWHPopupDivTag() + WWHALinksDivTag());
+      // -->
+    </script>
+  </body>
+</html>

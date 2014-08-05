@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+      package="test.Droidlogin"
+      android:versionCode="1"
+      android:versionName="1.0">
+    <application android:icon="@drawable/icon" android:label="@string/app_name">
+        <activity android:name=".Login"
+                  android:label="@string/app_name">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        
+        <activity android:name=".tab" android:label="@string/app_name"  
+          android:theme="@android:style/Theme.NoTitleBar">  </activity>
+        <activity android:name=".HiScreen" > </activity>
+		<activity android:name=".newGroup" > </activity>
+       	<activity android:name=".DateManager"> </activity>
+        <activity android:name=".SetPage"> </activity>
+        <activity android:name=".ReName"> </activity>
+        <activity android:name=".Arrangement"> </activity>
+        <activity android:name=".OpenClose"> </activity>
+        <activity android:name=".Settings"> </activity>
+        <activity android:name=".SetGroup"> </activity>
+        <activity android:name=".newTools"> </activity>
+        <activity android:name=".Check"> </activity>
+        
+        
+    </application>
+<uses-permission android:name="android.permission.CHANGE_NETWORK_STATE"></uses-permission>
+	<uses-permission android:name="android.permission.CHANGE_WIFI_STATE"></uses-permission>
+	<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"></uses-permission>
+	<uses-permission android:name="android.permission.ACCESS_WIFI_STATE"></uses-permission>
+ <uses-permission android:name="android.permission.INTERNET"/>
+ <uses-permission android:name="android.permission.VIBRATE"/>
+ 
+ 
+ 
+ 
+</manifest> 

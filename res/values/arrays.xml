@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+	<!-- 自定义数组，通过name调用该数组 -->
+    <string-array name="arrcontent">
+        <item>添加</item>
+        <item>删除</item>
+        <item>删除ALL</item>
+    </string-array>
+    
+    
+     <string-array name="colors">
+        <item>red</item>
+        <item>orange</item>
+        <item>yellow</item>
+        <item>green</item>
+        <item>blue</item>
+        <item>violet</item>
+    </string-array>
+    
+    <!-- Used in View/Spinner1.java -->
+    <string-array name="planets">
+        <item>Mercury</item>
+        <item>Venus</item>
+        <item>Earth</item>
+        <item>Mars</item>
+        <item>Jupiter</item>
+        <item>Saturn</item>
+        <item>Uranus</item>
+        <item>Neptune</item>
+        <item>Pluto</item>
+    </string-array>
+</resources>
